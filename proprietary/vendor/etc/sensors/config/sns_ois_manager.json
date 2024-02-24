@@ -1,0 +1,70 @@
+{
+  "config": {
+    "hw_platform": [
+      "MTP", "Dragon", "Surf", "QRD"
+    ],
+    "soc_id": [
+      "457", "530", "591", "537", "583", "613"
+    ]
+  },
+  "sns_ois_manager": {
+    "owner": "sns_ois_manager",
+    ".params":{
+      "owner": "sns_ois_manager",
+        "param1": {
+          "ver": "0", "type": "flt", "data": "0"
+        },
+       "param2": {
+          "ver": "0", "type": "flt", "data": "0"
+       },
+       "param3": {
+          "ver": "0", "type": "flt", "data": "0"
+       },
+       "param4": {
+          "ver": "0", "type": "flt", "data": "0"
+       },
+       "param5": {
+          "ver": "0", "type": "flt", "data": "0"
+       },
+       "param6": {
+          "ver": "0", "type": "flt", "data": "0"
+       },
+       "param7": {
+          "ver": "0", "type": "flt", "data": "0"
+       },
+       "param8": {
+          "ver": "0", "type": "flt", "data": "0"
+       },
+       "param9": {
+          "ver": "0", "type": "flt", "data": "0"
+       },
+       "param10": {
+          "ver": "0", "type": "flt", "data": "0"
+       },
+       "param11": {
+          "ver": "0", "type": "flt", "data": "0"
+       },
+       "param12": {
+          "ver": "0", "type": "flt", "data": "0"
+       },
+       "param13": {
+          "ver": "0", "type": "flt", "data": "0"
+       },
+       "param14": {
+          "ver": "0", "type": "flt", "data": "0"
+       },
+       "param15": {
+          "ver": "0", "type": "flt", "data": "0"
+       },
+       "param16": {
+          "ver": "0", "type": "flt", "data": "0"
+       },
+       "param17": {
+          "ver": "0", "type": "flt", "data": "0"
+       },
+       "param18": {
+          "ver": "0", "type": "flt", "data": "0"
+       }
+    }
+  }
+}

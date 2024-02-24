@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+ /*This doc literally is a whitelist,
+  *Parser configs to overlay the hint paramters
+  */
+-->
+
+<BoostConfigs>
+    <PerfBoost>
+
+    <!--app lauch boost-->
+        <!-- SCHEDBOOST resource opcode, value-->
+        <!-- CPUBOOST_MAX_FREQ BIG Core resource opcode, value-->
+        <!-- CPUBOOST_MAX_FREQ LITTLE Core resource opcode, value-->
+        <!-- CPUBOOST_MIN_FREQ BIG Core resource opcode, value-->
+        <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value-->
+        <!-- CPU_LLCC_BW_MAX_FREQ_V2 resource opcode, value-->
+        <!-- CPU_LLCC_BW_MIN_FREQ_V2 resource opcode, value-->
+        <!-- POWER COLLAPSE resource opcode, value-->
+        <!-- STORAGE CLK SCALING resource opcode, value-->
+        <!-- LLCC DDR LAT CPU0 MIN FREQ resource opcode, value-->
+        <!-- L3 resource opcode, value-->
+        <!-- GPU DISABLE resource opcode, value-->
+
+        <Config
+            Id="0x00001081" Type="1" Enable="true" Timeout="800" Target="parrot"
+            Resources="0x40C00000, 0x1, 0x40804000, 0xFFF, 0x40804100, 0xFFF,
+                       0x40800000, 0xFFF, 0x40800100, 0xFFF, 0x41848000, 0x104410,
+                       0x41844000, 0x104410, 0x40400000, 0x1, 0x42C10000, 0x1, 0x43460000, 0x30D400,
+                       0x43458000, 0x193138, 0x4281C000, 2000"
+            Applist="com.miui.calculator, com.miui.weather2, com.miui.notes, com.miui.gallery, com.android.calendar, com.android.deskclock,
+                     com.android.soundrecorder, com.android.contacts, com.android.mms, com.duokan.reader, com.miui.securitycenter, com.android.settings,
+                     com.xiaomi.market, com.android.quicksearchbox, com.android.fileexplorer, com.xiaomi.gamecenter, com.miui.video"/>
+
+
+    <!--Horizontal Scroll boost-->
+        <!-- CPUBW_MIN_FREQ resource opcode, value-->
+        <!-- CPUBOOST_MIN_FREQ BIG CORE resource opcode, value -->
+        <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value -->
+        <!-- SCHEDBOOST resource opcode, value-->
+        <!-- SCHED_BUSY_HYSTERSIS_CPU_MASK resource opcode, value-->
+        <!-- LPM Bias resource opcode, value-->
+
+        <Config
+            Id="0x00001080" Type="2" Enable="true" Target="parrot" Fps="60"
+            Resources="0x43000000, 0x26, 0x40800000, 1651, 0x40800100, 1516,
+                       0x40C00000, 2, 0x40C74000, 0xFF, 0x40408000, 0x63"
+            Applist="com.miui.home, com.zhihu.android"/>
+
+        <Config
+            Id="0x00001080" Type="2" Enable="true" Target="parrot" Fps="120"
+            Resources="0x43010000, 0x26, 0x40800000, 1900, 0x40800100, 1516,
+                       0x40C00000, 2, 0x40C74000, 0xFF, 0x40408000, 0x63"
+            Applist="com.miui.home, com.zhihu.android"/>
+
+
+    <!--Drag boost-->
+        <!-- CPUBOOST_MIN_FREQ BIG CORE resource opcode, value -->
+        <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value -->
+        <!-- GPU MIN_FREQUENCY resource opcode,value-->
+
+        <!-- Type="1", Drag boost -->
+        <Config
+             Id="0x00001087" Type="1" Enable="true" Target="parrot" Timeout="0" Fps="60"
+             Resources="0x40800000, 960, 0x40800100, 940, 0x42804000, 6"
+             Applist="com.autonavi.minimap"/>
+
+        <!-- CPUBOOST_MIN_FREQ BIG CORE resource opcode, value -->
+        <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value -->
+        <!-- SCHEDBOOST resource opcode, value-->
+        <!-- L3_MEMLAT_MIN_FREQ_GOLD resource opcode, value -->
+        <!-- GPU MIN_FREQUENCY resource opcode,value-->
+
+        <Config
+             Id="0x00001087" Type="1" Enable="true" Target="parrot" Timeout="0" Fps="120"
+             Resources="0x40800000, 1132, 0x40800100, 1094, 0x40C00000, 2,
+                        0x43480000, 0xAAE60, 0x42804000, 6"
+             Applist="com.autonavi.minimap"/>
+
+
+    <!--Vertical Scroll boost-->
+        <!-- CPUBOOST_MIN_FREQ BIG CORE resource opcode, value -->
+        <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value -->
+        <!-- SCHEDBOOST resource opcode, value-->
+        <!-- SCHED_BUSY_HYSTERSIS_CPU_MASK resource opcode, value-->
+        <!-- LPM Bias resource opcode, value-->
+
+        <Config
+            Id="0x00001080" Type="1" Enable="true" Target="parrot" Fps="60"
+            Resources="0x40800000, 1190, 0x40800100, 1113,
+                       0x40C00000, 2, 0x40C74000, 0xF0, 0x40408000, 0x27, 0x42804000, 6"
+            Applist="com.tencent.mm" />
+
+
+    <!--Prefling Scroll boost-->
+        <!-- CPUBOOST_MIN_FREQ BIG CORE resource opcode, value -->
+        <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value -->
+        <!-- SCHEDBOOST resource opcode, value-->
+
+        <Config
+            Id="0x00001080" Type="4" Enable="true" Target="parrot" Timeout="80" Fps="60"
+            Resources="0x40800000, 1190, 0x40800100, 1113, 0x40C00000, 2, 0x42804000, 6"
+            Applist="com.tencent.mm"/>
+
+
+    <!--Drag boost-->
+        <!-- CPUBOOST_MIN_FREQ BIG CORE resource opcode, value -->
+        <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value -->
+
+        <!-- Type="1", Drag boost -->
+        <Config
+             Id="0x00001087" Type="1" Enable="true" Target="parrot" Timeout="0" Fps="60"
+             Resources="0x40800000, 1190, 0x40800100, 1113, 0x42804000, 6"
+             Applist="com.tencent.mm"/>
+
+
+    </PerfBoost>
+</BoostConfigs>

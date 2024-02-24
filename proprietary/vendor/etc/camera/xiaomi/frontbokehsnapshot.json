@@ -1,0 +1,111 @@
+{
+  "PipelineName": "FrontBokehSnapshot",
+  "NodesList": {
+      "Node": [
+      {
+          "NodeName": "com.xiaomi.plugin.arcsofthdr",
+          "NodeInstance": "HDRInstance0"
+      },
+      {
+          "NodeName": "com.xiaomi.plugin.gpu",
+          "NodeInstance": "GpuInstance0"
+      },
+      {
+          "NodeName": "com.xiaomi.plugin.frontbokeh",
+          "NodeInstance": "FrontBokehInstance0"
+      },
+      {
+        "NodeName": "com.xiaomi.plugin.offlinepostproc",
+        "NodeInstance": "OfflineTDLInstance0"
+      },
+      {
+          "NodeName": "com.xiaomi.plugin.skinbeautifier",
+          "NodeInstance": "SkinBeautifierInstance0"
+      }
+      ]
+  },
+  "PortLinkages": {
+      "Link": [
+      {
+          "SrcPort": {
+              "PortId": 0,
+              "NodeInstance": "SourceBuffer"
+          },
+          "DstPort": {
+              "PortId": 0,
+              "NodeInstance": "HDRInstance0"
+          }
+      },
+      {
+        "SrcPort": {
+            "PortId": 0,
+            "NodeInstance": "HDRInstance0"
+        },
+        "DstPort": {
+            "PortId": 0,
+            "NodeInstance": "OfflineTDLInstance0"
+        }
+      },
+      {
+        "SrcPort": {
+            "PortId": 0,
+            "NodeInstance": "OfflineTDLInstance0"
+        },
+        "DstPort": {
+            "PortId": 0,
+            "NodeInstance": "SkinBeautifierInstance0"
+        }
+      },
+      {
+          "SrcPort": {
+              "PortId": 0,
+              "NodeInstance": "SkinBeautifierInstance0"
+          },
+          "DstPort": {
+              "PortId": 0,
+              "NodeInstance": "GpuInstance0"
+          }
+      },
+      {
+          "SrcPort": {
+              "PortId": 0,
+              "NodeInstance": "GpuInstance0"
+          },
+          "DstPort": {
+              "PortId": 0,
+              "NodeInstance": "FrontBokehInstance0"
+          }
+      },
+      {
+          "SrcPort": {
+              "PortId": 0,
+              "NodeInstance": "FrontBokehInstance0"
+          },
+          "DstPort": {
+              "PortId": 0,
+              "NodeInstance": "SinkBuffer0"
+          }
+      },
+      {
+          "SrcPort": {
+              "PortId": 1,
+              "NodeInstance": "FrontBokehInstance0"
+          },
+          "DstPort": {
+              "PortId": 1,
+              "NodeInstance": "SinkBuffer1"
+          }
+      },
+      {
+          "SrcPort": {
+              "PortId": 2,
+              "NodeInstance": "FrontBokehInstance0"
+          },
+          "DstPort": {
+              "PortId": 2,
+              "NodeInstance": "SinkBuffer2"
+          }
+      }
+      ]
+  }
+}

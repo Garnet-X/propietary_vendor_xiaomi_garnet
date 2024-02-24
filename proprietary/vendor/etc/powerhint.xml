@@ -1,0 +1,1295 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!--
+/*Copyright (c) 2020-2021, The Linux Foundation. All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are
+ * met:
+ *     * Redistributions of source code must retain the above copyright
+ *       notice, this list of conditions and the following disclaimer.
+ *     * Redistributions in binary form must reproduce the above
+ *       copyright notice, this list of conditions and the following
+ *       disclaimer in the documentation and/or other materials provided
+ *       with the distribution.
+ *     * Neither the name of The Linux Foundation nor the names of its
+ *       contributors may be used to endorse or promote products derived
+ *       from this software without specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
+ * WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+ * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
+ * ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
+ * BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+ * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+ * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+ * BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+ * WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+ * OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+ * IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ */
+-->
+<HintConfigs>
+    <Powerhint>
+
+       <!-- decode 240 fps tunings-->
+        <!--L CPU - max freq 700000 -->
+         <Config
+            Id="0X00001505" Enable="true" Timeout="0" Target="parrot"
+            Resources="0x40804100, 0x2BC"/>
+
+        <!-- video decode 30 fps non secure content tunings-->
+        <!-- MPCTLV3_MIN_FREQ_CLUSTER_BIG_CORE_0, 0XA -->
+        <Config
+            Id="0X00001502" Enable="true" Timeout="0" Target="parrot"
+            Resources="0x40800000, 0XA"/>
+
+        <!-- video decode 30 fps secure content tunings-->
+        <!-- MPCTLV3_MIN_FREQ_CLUSTER_BIG_CORE_0, 0XA -->
+        <Config
+            Id="0X00001504" Enable="true" Timeout="0" Target="parrot"
+            Resources="0x40800000, 0XA"/>
+
+        <!--camera preview -->
+        <!--L CPU SCHED LOAD BOOST -->
+        <!--B CPU SCHED LOAD BOOST -->
+        <!--L CPU Hispeed freq of 940Mhz -->
+        <!--L CPU - Set hispeed load 95 -->
+        <!--CPU-DDR BWMON - Set sample_ms 33 -->
+        <!--CPU MAX freq 1.5Ghz -->
+        <!--Sched downmigrate/group_downmigrate 40, Upmigrate/group_upmigrate 45 -->
+        <!--B CPU core ctl min cpus 4 -->
+        <!--AB-SCALE - 50 -->
+        <!--CPU-DDR BWMON - io percent 100 -->
+        <Config
+            Id="0x00001330" Enable="true" Timeout="0" Target="parrot"
+            Resources="0x40C68100, -10, 0x40C68000, -10, 0x4143C100, 940, 0x41440100, 0x5F,
+            0x43034000, 0x21, 0x40804100, 1497, 0x40CE0000, 0x002D0028, 0x40CF4000, 0x002D0028,
+            0x41000000, 0x4, 0x43048000, 0x32, 0x43020000, 100"/>
+
+        <!-- camera 30fps encode -->
+        <!--L CPU SCHED LOAD BOOST -->
+        <!--B CPU SCHED LOAD BOOST -->
+        <!--L CPU Hispeed freq of 940Mhz -->
+        <!--L CPU - Set hispeed load 95 -->
+        <!--CPU-DDR BWMON - Set sample_ms 33 -->
+        <!--L CPU Min Freq 940Mhz, Max Freq 1.5Ghz -->
+        <!--Sched downmigrate/group_downmigrate 40, Upmigrate/group_upmigrate 45 -->
+        <!--B CPU core ctl min cpus 4 -->
+        <!--AB_SCALE - 50 -->
+        <!--CPU-DDR BWMON - io percent 100 -->
+        <Config
+            Id="0x00001331" Enable="true" Timeout="0" Target="parrot"
+            Resources="0x40C68100, -10, 0x40C68000, -10, 0x4143C100, 940, 0x41440100, 0x5F,
+            0x43034000, 0x21, 0x40800100, 940, 0x40804100, 1497, 0x40CE0000, 0x002D0028,
+            0x40CF4000, 0x002D0028, 0x41000000, 0x4, 0x43048000, 0x32, 0x43020000, 100"/>
+
+        <!-- camera 60 FPS -->
+        <!--L CPU SCHED LOAD BOOST -->
+        <!--B CPU SCHED LOAD BOOST -->
+        <!--CPU-DDR BWMON - Set sample_ms 33 -->
+        <!--CPU MAX freq 1.5Ghz -->
+        <!--Sched downmigrate/group_downmigrate 30, Upmigrate/group_upmigrate 35 -->
+        <!--B CPU core ctl min cpus 4 -->
+        <!--AB_SCALE - 50 -->
+        <!--CPU-DDR BWMON - io percent 100 -->
+        <!--CPU-LLC-DDR BWMON - Set min_freq 1555 -->
+        <Config
+            Id="0x00001332" Enable="true" Timeout="0" Target="parrot"
+            Resources="0x40C68100, -10, 0x40C68000, -10, 0x43034000, 0x21, 0x40804100, 1497,
+            0x40CE0000, 0x0023001E, 0x40CF4000, 0x0023001E, 0x41000000, 0x4, 0x43048000, 0x32,
+            0x43020000, 100, 0x4303C000, 0x17BA38"/>
+
+        <!-- camera slow motion -->
+        <!--L CPU SCHED LOAD BOOST -->
+        <!--B CPU SCHED LOAD BOOST -->
+        <!--L CPU Hispeed freq of 940Mhz -->
+        <!--L CPU - Set hispeed load 95 -->
+        <!--CPU-DDR BWMON - Set sample_ms 33 -->
+        <!--L CPU Min Freq 940Mhz -->
+        <!--Sched downmigrate/group_downmigrate 40, Upmigrate/group_upmigrate 45 -->
+        <!--B CPU core ctl min cpus 4 -->
+        <!--AB_SCALE - 50 -->
+        <!--CPU-DDR BWMON - io percent 100 -->
+        <Config
+            Id="0x00001333" Type="0" Enable="true" Timeout="0" Target="parrot"
+            Resources="
+            0x40C68100, -10,
+            0x40C68000, -10,
+            0x4143C100, 940,
+            0x41440100, 0x5F,
+            0x43034000, 0x21,
+            0x40800100, 940,
+            0x40CE0000, 0x002D0028,
+            0x40CF4000, 0x002D0028,
+            0x41000000, 0x4,
+            0x43048000, 0x32,
+            0x43020000, 100
+            "/>
+
+        <!-- HFR 480fps -->
+        <!--L CPU CORE 0 SCHED LOAD BOOST -->
+        <!--B CPU SCHED LOAD BOOST -->
+        <!--CPU-DDR BWMON - Set sample ms 33 -->
+        <!--CPU CORE 0 Min freq to 1.113Ghz -->
+        <!--CPU MAX freq 1.5Ghz -->
+        <!--B CPU core ctl min cpus 4 -->
+        <!--CPU-DDR BWMON - io percent 100 -->
+        <Config
+            Id="0x00001334" Enable="true" Timeout="0" Target="parrot"
+            Resources="0x40C68100, -10, 0x40C68000, -10, 0x43034000, 0x21, 0x40800100, 0x459,
+            0x40804100, 1497, 0x41000000, 0x4, 0x43020000, 100"/>
+
+        <!-- multi camera 30fps-->
+        <!--L CPU CORE 0 SCHED LOAD BOOST -->
+        <!--B CPU SCHED LOAD BOOST -->
+        <!--L CPU Hispeed freq of 940Mhz -->
+        <!--CPU-DDR BWMON - Set sample_ms 20 -->
+        <!--L CPU Min Freq 940, Max Freq 1.5Ghz -->
+        <!--B CPU core ctl min cpus 4 -->
+        <!--AB_SCALE - 50 -->
+        <!--CPU-DDR BWMON - io percent 100 -->
+        <Config
+            Id="0x00001336" Enable="true" Timeout="0" Target="parrot"
+            Resources="0x40C68100, -10, 0x40C68000, -10, 0x4143C100, 940, 0x43034000, 0x21,
+            0x40800100, 1113, 0x40804100, 1497, 0x41000000, 0x4, 0x43048000, 0x32, 0x43020000, 100"/>
+
+        <!-- same settings for all the qvr power levels intentionally -->
+        <!-- qvr level cpu1 gpu1 -->
+        <!-- B CPU - Cluster min freq ~.691 Ghz -->
+        <!-- B CPU - Cluster max freq ~.2.131 Ghz -->
+        <!-- L CPU - Cluster min freq ~.691 Ghz -->
+        <!-- L CPU - Cluster max freq ~1.113 Ghz -->
+        <!-- GPU - min pwrlevel 7 (freq 345 Mhz) -->
+        <!-- GPU - max pwrlevel 0 (freq 940 Mhz) -->
+        <!-- Min Big CPUs 2 -->
+        <!-- Idefinite Duration -->
+        <Config
+            Id="0x0000130A" Enable="true" Target="parrot" Timeout="0"
+            Resources="0x40800000, 0x2B3, 0x40804000, 0x853, 0x40800100, 0x2B3, 0x40804100, 0x459,
+            0x42804000, 0x7, 0x42808000, 0x0, 0x41000000, 0x2"/>
+
+        <!-- qvr level cpu1 gpu2 -->
+        <!-- B CPU - Cluster min freq ~.691 Ghz -->
+        <!-- B CPU - Cluster max freq ~.2.131 Ghz -->
+        <!-- L CPU - Cluster min freq ~.691 Ghz -->
+        <!-- L CPU - Cluster max freq ~1.113 Ghz -->
+        <!-- GPU - min pwrlevel 7 (freq 345 Mhz) -->
+        <!-- GPU - max pwrlevel 0 (freq 940 Mhz) -->
+        <!-- Min Big CPUs 2 -->
+        <!-- Idefinite Duration -->
+        <Config
+            Id="0x0000130B" Enable="true" Target="parrot" Timeout="0"
+            Resources="0x40800000, 0x2B3, 0x40804000, 0x853, 0x40800100, 0x2B3, 0x40804100, 0x459,
+            0x42804000, 0x7, 0x42808000, 0x0, 0x41000000, 0x2"/>
+
+        <!-- qvr level cpu1 gpu3 -->
+        <!-- B CPU - Cluster min freq ~.691 Ghz -->
+        <!-- B CPU - Cluster max freq ~2.131 Ghz -->
+        <!-- L CPU - Cluster min freq ~.691 Ghz -->
+        <!-- L CPU - Cluster max freq ~1.113 Ghz -->
+        <!-- GPU - min pwrlevel 7 (freq 345 Mhz) -->
+        <!-- GPU - max pwrlevel 0 (freq 940 Mhz) -->
+        <!-- Min Big CPUs 2 -->
+        <!-- Idefinite Duration -->
+        <Config
+            Id="0x0000130C" Enable="true" Target="parrot" Timeout="0"
+            Resources="0x40800000, 0x2B3, 0x40804000, 0x853, 0x40800100, 0x2B3, 0x40804100, 0x459,
+            0x42804000, 0x7, 0x42808000, 0x0, 0x41000000, 0x2"/>
+
+        <!-- qvr level cpu2 gpu1 -->
+        <!-- B CPU - Cluster min freq ~.691 Ghz -->
+        <!-- B CPU - Cluster max freq ~.2.131 Ghz -->
+        <!-- L CPU - Cluster min freq ~.691 Ghz -->
+        <!-- L CPU - Cluster max freq ~1.113 Ghz -->
+        <!-- GPU - min pwrlevel 7 (freq 345 Mhz) -->
+        <!-- GPU - max pwrlevel 0 (freq 940 Mhz) -->
+        <!-- Min Big CPUs 2 -->
+        <!-- Idefinite Duration -->
+        <Config
+            Id="0x0000130D" Enable="true" Target="parrot" Timeout="0"
+            Resources="0x40800000, 0x2B3, 0x40804000, 0x853, 0x40800100, 0x2B3, 0x40804100, 0x459,
+            0x42804000, 0x7, 0x42808000, 0x0, 0x41000000, 0x2"/>
+
+        <!-- qvr level cpu2 gpu2 -->
+        <!-- B CPU - Cluster min freq ~.691 Ghz -->
+        <!-- B CPU - Cluster max freq ~.2.131 Ghz -->
+        <!-- L CPU - Cluster min freq ~.691 Ghz -->
+        <!-- L CPU - Cluster max freq ~1.113 Ghz -->
+        <!-- GPU - min pwrlevel 7 (freq 345 Mhz) -->
+        <!-- GPU - max pwrlevel 0 (freq 940 Mhz) -->
+        <!-- Min Big CPUs 2 -->
+        <!-- Idefinite Duration -->
+        <Config
+            Id="0x0000130E" Enable="true" Target="parrot" Timeout="0"
+            Resources="0x40800000, 0x2B3, 0x40804000, 0x853, 0x40800100, 0x2B3, 0x40804100, 0x459,
+            0x42804000, 0x7, 0x42808000, 0x0, 0x41000000, 0x2"/>
+
+        <!-- qvr level cpu2 gpu3 -->
+        <!-- B CPU - Cluster min freq ~.691 Ghz -->
+        <!-- B CPU - Cluster max freq ~.2.131 Ghz -->
+        <!-- L CPU - Cluster min freq ~.691 Ghz -->
+        <!-- L CPU - Cluster max freq ~1.113 Ghz -->
+        <!-- GPU - min pwrlevel 7 (freq 345 Mhz) -->
+        <!-- GPU - max pwrlevel 0 (freq 940 Mhz) -->
+        <!-- Min Big CPUs 2 -->
+        <!-- Idefinite Duration -->
+        <Config
+            Id="0x0000130F" Enable="true" Target="parrot" Timeout="0"
+            Resources="0x40800000, 0x2B3, 0x40804000, 0x853, 0x40800100, 0x2B3, 0x40804100, 0x459,
+            0x42804000, 0x7, 0x42808000, 0x0, 0x41000000, 0x2"/>
+
+        <!-- qvr level cpu3 gpu1 -->
+        <!-- B CPU - Cluster min freq ~.691 Ghz -->
+        <!-- B CPU - Cluster max freq ~.2.131 Ghz -->
+        <!-- L CPU - Cluster min freq ~.691 Ghz -->
+        <!-- L CPU - Cluster max freq ~1.113 Ghz -->
+        <!-- GPU - min pwrlevel 7 (freq 345 Mhz) -->
+        <!-- GPU - max pwrlevel 0 (freq 940 Mhz) -->
+        <!-- Min Big CPUs 2 -->
+        <!-- Idefinite Duration -->
+        <Config
+            Id="0x00001310" Enable="true" Target="parrot" Timeout="0"
+            Resources="0x40800000, 0x2B3, 0x40804000, 0x853, 0x40800100, 0x2B3, 0x40804100, 0x459,
+            0x42804000, 0x7, 0x42808000, 0x0, 0x41000000, 0x2"/>
+
+        <!-- qvr level cpu3 gpu2 -->
+        <!-- B CPU - Cluster min freq ~.691 Ghz -->
+        <!-- B CPU - Cluster max freq ~.2.131 Ghz -->
+        <!-- L CPU - Cluster min freq ~.691 Ghz -->
+        <!-- L CPU - Cluster max freq ~1.113 Ghz -->
+        <!-- GPU - min pwrlevel 7 (freq 345 Mhz) -->
+        <!-- GPU - max pwrlevel 0 (freq 940 Mhz) -->
+        <!-- Min Big CPUs 2 -->
+        <!-- Idefinite Duration -->
+        <Config
+            Id="0x00001311" Enable="true" Target="parrot" Timeout="0"
+            Resources="0x40800000, 0x2B3, 0x40804000, 0x853, 0x40800100, 0x2B3, 0x40804100, 0x459,
+            0x42804000, 0x7, 0x42808000, 0x0, 0x41000000, 0x2"/>
+
+        <!-- qvr level cpu3 gpu3 -->
+        <!-- B CPU - Cluster min freq ~.691 Ghz -->
+        <!-- B CPU - Cluster max freq ~.2.131 Ghz -->
+        <!-- L CPU - Cluster min freq ~.691 Ghz -->
+        <!-- L CPU - Cluster max freq ~1.113 Ghz -->
+        <!-- GPU - min pwrlevel 7 (freq 345 Mhz) -->
+        <!-- GPU - max pwrlevel 0 (freq 940 Mhz) -->
+        <!-- Min Big CPUs 2 -->
+        <!-- Idefinite Duration -->
+        <Config
+            Id="0x00001312" Enable="true" Target="parrot" Timeout="0"
+            Resources="0x40800000, 0x2B3, 0x40804000, 0x853, 0x40800100, 0x2B3, 0x40804100, 0x459,
+            0x42804000, 0x7, 0x42808000, 0x0, 0x41000000, 0x2"/>
+
+         <!-- sustained performance -->
+         <!-- B CPU - Cluster min freq uncapped -->
+         <!-- L CPU - Cluster min freq uncapped -->
+         <!-- B CPU - Cluster max freq ~1.344 GHz -->
+         <!-- L CPU - Cluster max freq ~1.113 Ghz -->
+         <!-- GPU - min freq 345Mhz -->
+         <!-- GPU - max freq 500Mhz -->
+         <!-- GPUBW freq uncapped -->
+         <Config
+             Id="0x00001206" Enable="true" Timeout="0" Target="parrot"
+             Resources="0x40800000, 0x0, 0x40800100, 0x0, 0x40804000, 0x540, 0x40804100, 0x459,
+             0X4280C000, 0x159, 0X42810000, 0x1F4, 0x42814000, 0x0"/>
+
+         <!-- vr mode -->
+         <!-- B CPU - Cluster min freq ~1.190 Ghz -->
+         <!-- L CPU - Cluster min freq ~0.940 Ghz -->
+         <!-- B CPU - Cluster max freq ~1.90 Ghz -->
+         <!-- L CPU - Cluster max freq ~1.804 Ghz -->
+         <!-- GPU - min freq 345Mhz -->
+         <!-- GPU - max freq 734Mhz -->
+         <!-- GPUBW uncapped -->
+         <Config
+             Id="0x00001207" Enable="true" Timeout="0" Target="parrot"
+             Resources="0x40800000, 0x4A6, 0x40800100, 0x3AC, 0x40804000, 0x76C, 0x40804100, 0x70C,
+             0X4280C000, 0x159, 0X4280C000, 0x2DE, 0x42814000, 0x0"/>
+
+         <!-- vr mode sustained performance -->
+         <!-- B CPU - Cluster min freq ~1.190 Ghz -->
+         <!-- L CPU - Cluster min freq ~1.113 Ghz -->
+         <!-- B CPU - Cluster max freq ~1.190 Ghz -->
+         <!-- L CPU - Cluster max freq ~1.113 Ghz -->
+         <!-- GPU - min freq 500Mhz -->
+         <!-- GPU - max freq 500Mhz -->
+         <!-- GPUBW uncapped  -->
+         <Config
+             Id="0x00001301" Enable="true" Timeout="0" Target="parrot"
+             Resources="0x40800000, 0x4A6, 0x40800100, 0x459, 0x40804000, 0x4A6, 0x40804100, 0x459,
+             0X4280C000, 0x1F4, 0X42810000, 0x1F4, 0x42814000, 0x0"/>
+
+
+
+        <!-- camera open tunings-->
+        <!-- MPCTLV3_ALL_CPUS_PWR_CLPS_DIS+1, (0x40400000+1),0x1 -->
+        <!-- MPCTLV3_SCHED_BOOST, 0x1 -->
+        <!-- MPCTLV3_MAX_FREQ_CLUSTER_BIG_CORE_0, 0xFFF -->
+        <!-- MPCTLV3_MIN_FREQ_CLUSTER_BIG_CORE_0, 0xFFF -->
+        <!-- MPCTLV3_MAX_FREQ_CLUSTER_LITTLE_CORE_0, 0xFFF -->
+        <!-- MPCTLV3_MIN_FREQ_CLUSTER_LITTLE_CORE_0, 0xFFF -->
+        <!-- MPCTLV3_BUS_DCVS_LLCC_DDR_LAT_MINFREQ_SILVER,(0x43460000),1017000 -->
+        <!-- MPCTLV3_BUS_DCVS_DDR_LAT_MINFREQ_GOLD,       (0x43488000),2092000-->
+        <!-- MPCTLV3_BUS_DCVS_L3_MEMLAT_MIN_FREQ_GOLD,    (0x43480000),1440000 -->
+        <!-- MPCTLV3_LLCC_DDR_BW_MIN_FREQ_V2,             (0x4303C000),2092000 -->
+        <!-- B CPU - Disable Core Control -->
+        <!-- L CPU - Disable Core Control -->
+        <!-- MPCTLV3_MIN_ONLINE_CPU_CLUSTER_BIG                (0x41000000),4 -->
+        <!-- MPCTLV3_MIN_ONLINE_CPU_CLUSTER_LITTLE             (0x41000100),4 -->
+        <!-- MPCTLV3_SCHED_CPUSET_SYSTEM_BACKGROUND, 0x7 -->
+        <!-- MPCTLV3_SCHED_CPUSET_CAMERA_BACKGROUND,  0x6 -->
+        <!-- MPCTLV3_CPUCTL_CAMERA_CPUSHARE,          4096 -->
+        <!-- MPCTLV3_CPUCTL_BACKGROUND_CPUSHARE,      512 -->
+        <!-- MPCTLV3_MEMCG_SWAPPINESS_CAMERA_PROVIDER, 60 -->
+        <!--MPCTLV3_XIAOMI_KSWAPD_AFFINITY, 0x3F -->
+        <Config
+            Id="0x00001337" Type="0" Enable="true" Timeout="0" Target="parrot"
+            Resources="
+            0x40400001, 0x1,
+            0x40C00000, 0x1,
+            0x40804000, 0XFFF,
+            0x40800000, 0XFFF,
+            0x40804100, 0XFFF,
+            0x40800100, 0XFFF,
+            0x43460000, 1017000,
+            0x43488000,	2092000,
+            0x43480000,	1440000,
+            0x4303C000,	2092000,
+            0x41008000, 0,
+            0x41008100, 0,
+            0x41000000, 4,
+            0x41000100, 4,
+            0x40C44000, 0x7,
+            0x43C08000,0x6,
+            0x43C10000,4096,
+            0x43C0C000,512,
+            0x5FC8C000, 60,
+            0x5FC00000, 0x3F
+            "/>
+
+         <!-- camera close tunings-->
+         <!-- MPCTLV3_ALL_CPUS_PWR_CLPS_DIS+1, (0x40400000+1),0x1 -->
+         <!-- MPCTLV3_SCHED_BOOST, 0x1 -->
+         <!-- MPCTLV3_MAX_FREQ_CLUSTER_BIG_CORE_0, 0xFFF -->
+         <!-- MPCTLV3_MIN_FREQ_CLUSTER_BIG_CORE_0, 0xFFF -->
+         <!-- MPCTLV3_MAX_FREQ_CLUSTER_LITTLE_CORE_0, 0xFFF -->
+         <!-- MPCTLV3_MIN_FREQ_CLUSTER_LITTLE_CORE_0, 0xFFF -->
+         <!-- MPCTLV3_CORE_CTL_ENABLE_BIG                       (0x41008000),0    -->
+         <!-- MPCTLV3_CORE_CTL_ENABLE_LITTLE                    (0x41008100),0    -->
+         <!-- MPCTLV3_MIN_ONLINE_CPU_CLUSTER_BIG                (0x41000000),4 -->
+         <!-- MPCTLV3_MIN_ONLINE_CPU_CLUSTER_LITTLE             (0x41000100),4 -->
+         <!-- MPCTLV3_SCHED_CPUSET_SYSTEM_BACKGROUND, 0x7 -->
+         <!-- MPCTLV3_SCHED_CPUSET_TOP_APP,           0xF8 -->
+         <!-- MPCTLV3_CPUCTL_TOPAPP_CPUSHARE,          4096 -->
+         <!-- MPCTLV3_CPUCTL_CAMERA_CPUSHARE,          4096 -->
+         <!-- MPCTLV3_CPUCTL_BACKGROUND_CPUSHARE,      512 -->
+        <!-- MPCTLV3_MEMCG_SWAPPINESS_CAMERA_PROVIDER, 60 -->
+         <!--MPCTLV3_XIAOMI_KSWAPD_AFFINITY, 0x3F -->
+         <Config
+            Id="0x00001338" Type="0" Enable="true" Timeout="0" Target="parrot"
+             Resources="
+             0x40400001, 0x1,
+             0x40C00000, 0x1,
+             0x40804000, 0XFFF,
+             0x40800000, 0XFFF,
+             0x40804100, 0XFFF,
+             0x40800100, 0XFFF,
+             0x41008000,0,
+             0x41008100,0,
+             0x41000000, 4,
+             0x41000100, 4,
+             0x40C44000, 0x7,
+             0x40C3C000, 0xF8,
+             0x43C20000, 4096,
+             0x43C10000, 4096,
+             0x43C0C000, 512,
+             0x5FC8C000, 60,
+             0x5FC00000, 0x3F
+             "/>
+
+         <!-- camera snapshot tunings-->
+         <!-- MPCTLV3_ALL_CPUS_PWR_CLPS_DIS + 1       (0x40400000 + 1),0x1-->
+         <!-- MPCTLV3_SCHED_BOOST                     (0x40C00000),0x1 -->
+         <!-- MPCTLV3_MAX_FREQ_CLUSTER_BIG_CORE_0     (0x40804000),0xFFF -->
+         <!-- MPCTLV3_MIN_FREQ_CLUSTER_BIG_CORE_0     (0x40800000),0xFFF -->
+         <!-- MPCTLV3_MAX_FREQ_CLUSTER_LITTLE_CORE_0  (0x40804100),0xFFF -->
+         <!-- MPCTLV3_MIN_FREQ_CLUSTER_LITTLE_CORE_0  (0x40800100),0xFFF -->
+         <!-- MPCTLV3_CORE_CTL_ENABLE_BIG                       (0x41008000),0    -->
+         <!-- MPCTLV3_CORE_CTL_ENABLE_LITTLE                    (0x41008100),0    -->
+         <!-- MPCTLV3_MIN_ONLINE_CPU_CLUSTER_BIG                (0x41000000),4 -->
+         <!-- MPCTLV3_MIN_ONLINE_CPU_CLUSTER_LITTLE             (0x41000100),4 -->
+         <!--Sched downmigrate/group_downmigrate 10, Upmigrate/group_upmigrate 20 -->
+         <!-- MPCTLV3_BUS_DCVS_LLCC_DDR_LAT_MINFREQ_SILVER,(0x43460000),1017000 -->
+         <!-- MPCTLV3_BUS_DCVS_DDR_LAT_MINFREQ_GOLD,       (0x43488000),2092000-->
+         <!-- MPCTLV3_BUS_DCVS_L3_MEMLAT_MIN_FREQ_GOLD,    (0x43480000),1440000 -->
+         <!-- MPCTLV3_LLCC_DDR_BW_MIN_FREQ_V2,             (0x4303C000),2092000 -->
+         <!-- MPCTLV3_CPUCTL_TOPAPP_CPUSHARE,          4096 -->
+         <!-- MPCTLV3_CPUCTL_CAMERA_CPUSHARE,          4096 -->
+         <!-- MPCTLV3_CPUCTL_BACKGROUND_CPUSHARE,      512 -->
+         <!--MPCTLV3_XIAOMI_KSWAPD_AFFINITY, 0x3F -->
+         <Config
+            Id="0x00001339" Type="0" Enable="true" Timeout="0" Target="parrot"
+             Resources="
+             0x40400001,0x1,
+             0x40C00000,0x1,
+             0x40804000,0xFFF,
+             0x40800000,0xFFF,
+             0x40804100,0xFFF,
+             0x40800100,0xFFF,
+             0x41008000,0,
+             0x41008100,0,
+             0x41000000, 4,
+             0x41000100, 4,
+             0x40CE0000, 0x0014000A,
+             0x40CF4000, 0x0014000A,
+             0x43460000,1017000,
+             0x43488000,2092000,
+             0x43480000,1440000,
+             0x4303C000,2092000,
+             0x43C20000,4096,
+             0x43C10000,4096,
+             0x43C0C000,512,
+             0x5FC00000, 0x3F
+             "/>
+
+        <!-- camera sHDR -->
+        <!--L CPU SCHED LOAD BOOST -->
+        <!--B CPU SCHED LOAD BOOST -->
+        <!--L CPU Hispeed freq of 940Mhz -->
+        <!--L CPU - Set hispeed load 95 -->
+        <!--CPU-DDR BWMON - Set sample_ms 33 -->
+        <!--L CPU Min Freq 940Mhz, Max Freq 1.5Ghz -->
+        <!--Sched downmigrate/group_downmigrate 10, Upmigrate/group_upmigrate 20 -->
+        <!--B CPU core ctl min cpus 4 -->
+        <!--AB_SCALE - 50 -->
+        <!--CPU-DDR BWMON - io percent 100 -->
+        <!--CPU-LLC-DDR BWMON - Set min_freq 1555 -->
+        <Config
+            Id="0x00001340" Enable="true" Timeout="0" Target="parrot"
+            Resources="0x40C68100, -10, 0x40C68000, -10, 0x4143C100, 940, 0x41440100, 0x5F,
+            0x43034000, 0x21, 0x40800100, 940, 0x40804100, 1497, 0x40CE0000, 0x0014000A,
+            0x40CF4000, 0x0014000A, 0x41000000, 0x4, 0x43048000, 0x32, 0x43020000, 100,
+            0x4303C000, 0x17BA38"/>
+
+         <!-- camera START PREVIEW tunings-->
+         <!-- MPCTLV3_LLCC_DDR_BW_SAMPLE_MS                     (0x43034000),0x21 -->
+         <!-- MPCTLV3_LLCC_DDR_BW_IO_PERCENT                    (0x43020000),0x64 -->
+         <!-- MPCTLV3_MIN_FREQ_CLUSTER_LITTLE_CORE_0(0x40800100), 0x52C -->
+         <!-- MPCTLV3_CORE_CTL_ENABLE_BIG                       (0x41008000),0    -->
+         <!-- MPCTLV3_CORE_CTL_ENABLE_LITTLE                    (0x41008100),0    -->
+         <!-- MPCTLV3_MIN_ONLINE_CPU_CLUSTER_BIG                (0x41000000),4 -->
+         <!-- MPCTLV3_MIN_ONLINE_CPU_CLUSTER_LITTLE             (0x41000100),4 -->
+         <!--Sched downmigrate/group_downmigrate 10, Upmigrate/group_upmigrate 20 -->
+         <!--MPCTLV3_XIAOMI_KSWAPD_AFFINITY, 0x3F -->
+         <!-- MPCTLV3_CPUCTL_CAMERA_CPUSHARE,          2048 -->
+         <Config
+            Id="0x00001341" Type="0" Enable="true" Timeout="0" Target="parrot"
+             Resources="
+            0x43034000,0x21,
+            0x43020000,0x64,
+            0x40800100, 0x52C,
+            0x41008000, 0,
+            0x41008100, 0,
+            0x41000000, 4,
+            0x41000100, 4,
+            0x40CE0000, 0x0014000A,
+            0x40CF4000, 0x0014000A,
+            0x5FC00000, 0x3F,
+            0x43C10000, 2048
+            "/>
+
+         <!-- camera START PREVIEW THERMAL tunings-->
+         <!-- MPCTLV3_LLCC_DDR_BW_SAMPLE_MS                     (0x43034000),0x21 -->
+         <!-- MPCTLV3_LLCC_DDR_BW_IO_PERCENT                    (0x43020000),0x64 -->
+         <!--Sched downmigrate/group_downmigrate 10, Upmigrate/group_upmigrate 20 -->
+         <!-- L CPU - Set hispeed load 99 -->
+         <!-- MPCTLV3_CORE_CTL_ENABLE_BIG                       (0x41008000),0    -->
+         <!-- MPCTLV3_CORE_CTL_ENABLE_LITTLE                    (0x41008100),0    -->
+         <!-- MPCTLV3_MIN_ONLINE_CPU_CLUSTER_BIG                (0x41000000),4 -->
+         <!-- MPCTLV3_MIN_ONLINE_CPU_CLUSTER_LITTLE             (0x41000100),4 -->
+         <!-- TBD, MPCTLV3_SCHEDUTIL_PREDICTIVE_LOAD_CLUSTER_LITTLE  (0x41444100),0  -->
+         <!-- TBD, MPCTLV3_SCHEDUTIL_PREDICTIVE_LOAD_CLUSTER_BIG     (0x41444000),0  -->
+         <Config
+            Id="0x00001342" Type="0" Enable="true" Timeout="0" Target="parrot"
+             Resources="
+            0x43034000,0x21,
+            0x43020000,0x64,
+            0x40CE0000, 0x0014000A,
+            0x40CF4000, 0x0014000A,
+            0x41440100, 0x63,
+            0x41008000,0,
+            0x41008100,0,
+            0x41000000, 4,
+            0x41000100, 4,
+            0x41444100,0x0,
+            0x41444000,0x0
+            "/>
+
+         <!-- camera BOKEH PREVIEW  tunings-->
+         <!-- MPCTLV3_LLCC_DDR_BW_SAMPLE_MS                     (0x43034000),0x21 -->
+         <!-- MPCTLV3_LLCC_DDR_BW_IO_PERCENT                    (0x43020000),0x64 -->
+         <!--Sched downmigrate/group_downmigrate 10, Upmigrate/group_upmigrate 20 -->
+         <!-- MPCTLV3_CORE_CTL_ENABLE_BIG                       (0x41008000),0    -->
+         <!-- MPCTLV3_CORE_CTL_ENABLE_LITTLE                    (0x41008100),0    -->
+         <!-- MPCTLV3_MIN_ONLINE_CPU_CLUSTER_BIG                (0x41000000),4 -->
+         <!-- MPCTLV3_MIN_ONLINE_CPU_CLUSTER_LITTLE             (0x41000100),4 -->
+         <!-- L CPU - Set hispeed load 99 -->
+         <!-- MPCTLV3_SCHEDUTIL_PREDICTIVE_LOAD_CLUSTER_LITTLE  (0x41444100),0  -->
+         <!-- MPCTLV3_SCHEDUTIL_PREDICTIVE_LOAD_CLUSTER_BIG     (0x41444000),0  -->
+         <!--MPCTLV3_XIAOMI_KSWAPD_AFFINITY, 0x3F -->
+         <!-- MPCTLV3_CPUCTL_CAMERA_CPUSHARE,          2048 -->
+         <Config
+            Id="0x00001343" Type="0" Enable="true" Timeout="0" Target="parrot"
+             Resources="
+            0x43034000,0x21,
+            0x43020000,0x64,
+            0x40CE0000, 0x0014000A,
+            0x40CF4000, 0x0014000A,
+            0x41008000,0,
+            0x41008100,0,
+            0x41000000, 4,
+            0x41000100, 4,
+            0x41440100, 0x63,
+            0x41444100,0x0,
+            0x41444000,0x0,
+            0x5FC00000, 0x3F,
+            0x43C10000, 2048
+            "/>
+
+         <!-- camera VLOG PREVIEW tunings-->
+         <!-- MPCTLV3_LLCC_DDR_BW_SAMPLE_MS                     (0x43034000),0x21 -->
+         <!-- MPCTLV3_LLCC_DDR_BW_IO_PERCENT                    (0x43020000),0x64 -->
+         <!--Sched downmigrate/group_downmigrate 10, Upmigrate/group_upmigrate 20 -->
+         <!-- MPCTLV3_CORE_CTL_ENABLE_BIG                       (0x41008000),0    -->
+         <!-- MPCTLV3_CORE_CTL_ENABLE_LITTLE                    (0x41008100),0    -->
+         <!-- MPCTLV3_MIN_ONLINE_CPU_CLUSTER_BIG                (0x41000000),4 -->
+         <!-- MPCTLV3_MIN_ONLINE_CPU_CLUSTER_LITTLE             (0x41000100),4 -->
+         <!-- MPCTLV3_SCHEDUTIL_PREDICTIVE_LOAD_CLUSTER_LITTLE  (0x41444100),0  -->
+         <!-- MPCTLV3_SCHEDUTIL_PREDICTIVE_LOAD_CLUSTER_BIG     (0x41444000),0  -->
+         <!-- L CPU - Set hispeed load 99 -->
+         <!--MPCTLV3_XIAOMI_KSWAPD_AFFINITY, 0x3F -->
+         <Config
+            Id="0x00001344" Type="0" Enable="true" Timeout="0" Target="parrot"
+             Resources="
+            0x43034000,0x21,
+            0x43020000,0x64,
+            0x40CE0000, 0x0014000A,
+            0x40CF4000, 0x0014000A,
+            0x41008000,0,
+            0x41008100,0,
+            0x41000000, 4,
+            0x41000100, 4,
+            0x41444100,0x0,
+            0x41444000,0x0,
+            0x41440100,0x63,
+            0x5FC00000, 0x3F
+            "/>
+
+         <!-- camera SAT PREVIEW tunings-->
+         <!-- MPCTLV3_LLCC_DDR_BW_SAMPLE_MS                     (0x43034000),0x21 -->
+         <!-- MPCTLV3_LLCC_DDR_BW_IO_PERCENT                    (0x43020000),0x64 -->
+         <!--Sched downmigrate/group_downmigrate 10, Upmigrate/group_upmigrate 20 -->
+         <!-- MPCTLV3_CORE_CTL_ENABLE_BIG                       (0x41008000),0    -->
+         <!-- MPCTLV3_CORE_CTL_ENABLE_LITTLE                    (0x41008100),0    -->
+         <!-- MPCTLV3_MIN_ONLINE_CPU_CLUSTER_BIG                (0x41000000),4 -->
+         <!-- MPCTLV3_MIN_ONLINE_CPU_CLUSTER_LITTLE             (0x41000100),4 -->
+         <!-- MPCTLV3_SCHEDUTIL_PREDICTIVE_LOAD_CLUSTER_LITTLE  (0x41444100),0   -->
+         <!-- MPCTLV3_SCHEDUTIL_PREDICTIVE_LOAD_CLUSTER_BIG     (0x41444000),0  -->
+         <!-- L CPU - Set hispeed load 99 -->
+         <Config
+            Id="0x00001345" Type="0" Enable="true" Timeout="0" Target="parrot"
+             Resources="
+            0x43034000,0x21,
+            0x43020000,0x64,
+            0x40CE0000, 0x0014000A,
+            0x40CF4000, 0x0014000A,
+            0x41008000,0,
+            0x41008100,0,
+            0x41000000, 4,
+            0x41000100, 4,
+            0x41444100,0x0,
+            0x41444000,0x0,
+            0x41440100, 0x63
+            "/>
+
+         <!-- camera SAT ZOOM tunings-->
+         <!-- MPCTLV3_LLCC_DDR_BW_HIST_MEMORY                   (0x43050000),0x00 -->
+         <!-- MPCTLV3_LLCC_DDR_BW_HYST_LENGTH                   (0x43054000),0x00 -->
+         <!-- MPCTLV3_MIN_FREQ_CLUSTER_BIG_CORE_0               (0x40800000),2400 -->
+         <!--Sched downmigrate/group_downmigrate 10, Upmigrate/group_upmigrate 20 -->
+         <!-- MPCTLV3_LLCC_DDR_BW_SAMPLE_MS                     (0x43034000),0xA -->
+         <!-- MPCTLV3_LLCC_DDR_BW_IO_PERCENT                    (0x43020000),0x64 -->
+         <!-- MPCTLV3_CORE_CTL_ENABLE_BIG                       (0x41008000),0    -->
+         <!-- MPCTLV3_CORE_CTL_ENABLE_LITTLE                    (0x41008100),0    -->
+         <!-- MPCTLV3_MIN_ONLINE_CPU_CLUSTER_BIG                (0x41000000),4 -->
+         <!-- MPCTLV3_MIN_ONLINE_CPU_CLUSTER_LITTLE             (0x41000100),4 -->
+         <!-- MPCTLV3_SCHEDUTIL_PREDICTIVE_LOAD_CLUSTER_LITTLE  (0x41444100),0  -->
+         <!-- MPCTLV3_SCHEDUTIL_PREDICTIVE_LOAD_CLUSTER_BIG     (0x41444000),0  -->
+          <Config
+            Id="0x00001346" Type="0" Enable="true" Timeout="0" Target="parrot"
+             Resources="
+            0x43050000,0,
+            0x43054000,0,
+            0x40800000,2400
+            0x40CE0000, 0x0014000A,
+            0x40CF4000, 0x0014000A,
+            0x43034000,0xA,
+            0x43020000,0x64,
+            0x41008000,0,
+            0x41008100,0,
+            0x41000000, 4,
+            0x41000100, 4,
+            0x41444100,0x0,
+            0x41444000,0x0
+             "/>
+
+         <!-- camera HD 30FPS RECORDING tunings-->
+         <!-- MPCTLV3_LLCC_DDR_BW_HIST_MEMORY                   (0x43050000),0x00 -->
+         <!-- MPCTLV3_LLCC_DDR_BW_HYST_LENGTH                   (0x43054000),0x00 -->
+         <!-- MPCTLV3_LLCC_DDR_BW_SAMPLE_MS                     (0x43034000),0x21 -->
+         <!-- MPCTLV3_LLCC_DDR_BW_IO_PERCENT                    (0x43020000),0x64 -->
+         <!--Sched downmigrate/group_downmigrate 10, Upmigrate/group_upmigrate 20 -->
+         <!-- MPCTLV3_CORE_CTL_ENABLE_BIG                       (0x41008000),0    -->
+         <!-- MPCTLV3_CORE_CTL_ENABLE_LITTLE                    (0x41008100),0    -->
+         <!-- MPCTLV3_MIN_ONLINE_CPU_CLUSTER_BIG                (0x41000000),4 -->
+         <!-- MPCTLV3_MIN_ONLINE_CPU_CLUSTER_LITTLE             (0x41000100),4 -->
+         <!-- MPCTLV3_SCHEDUTIL_PREDICTIVE_LOAD_CLUSTER_LITTLE  (0x41444100),0  -->
+         <!-- MPCTLV3_SCHEDUTIL_PREDICTIVE_LOAD_CLUSTER_BIG     (0x41444000),0  -->
+         <!--MPCTLV3_XIAOMI_KSWAPD_AFFINITY, 0x3F -->
+         <!-- MPCTLV3_CPUCTL_CAMERA_CPUSHARE,          2048 -->
+         <Config
+            Id="0x00001347" Type="0" Enable="true" Timeout="0" Target="parrot"
+             Resources="
+            0x43050000,0,
+            0x43054000,0,
+            0x43034000,0x21,
+            0x43020000,0x64,
+            0x40CE0000, 0x0014000A,
+            0x40CF4000, 0x0014000A,
+            0x41008000,0,
+            0x41008100,0,
+            0x41000000, 4,
+            0x41000100, 4,
+            0x41444100,0x0,
+            0x41444000,0x0,
+            0x5FC00000, 0x3F,
+            0x43C10000, 2048
+            "/>
+
+         <!-- camera FHD 30FPS RECORDING tunings-->
+         <!-- MPCTLV3_LLCC_DDR_BW_SAMPLE_MS                     (0x43034000),0x21 -->
+         <!-- MPCTLV3_LLCC_DDR_BW_IO_PERCENT                    (0x43020000),0x64 -->
+         <!--Sched downmigrate/group_downmigrate 10, Upmigrate/group_upmigrate 20 -->
+         <!-- MPCTLV3_CORE_CTL_ENABLE_BIG                       (0x41008000),0    -->
+         <!-- MPCTLV3_CORE_CTL_ENABLE_LITTLE                    (0x41008100),0    -->
+         <!-- MPCTLV3_MIN_ONLINE_CPU_CLUSTER_BIG                (0x41000000),4 -->
+         <!-- MPCTLV3_MIN_ONLINE_CPU_CLUSTER_LITTLE             (0x41000100),4 -->
+         <!-- MPCTLV3_SCHEDUTIL_PREDICTIVE_LOAD_CLUSTER_LITTLE  (0x41444100),0  -->
+         <!-- MPCTLV3_SCHEDUTIL_PREDICTIVE_LOAD_CLUSTER_BIG     (0x41444000),0  -->
+         <!--MPCTLV3_XIAOMI_KSWAPD_AFFINITY, 0x3F -->
+         <!-- MPCTLV3_CPUCTL_CAMERA_CPUSHARE,          2048 -->
+         <Config
+            Id="0x00001348" Type="0" Enable="true" Timeout="0" Target="parrot"
+             Resources="
+            0x43034000,0x21,
+            0x43020000,0x64,
+            0x40CE0000, 0x0014000A,
+            0x40CF4000, 0x0014000A,
+            0x41008000,0,
+            0x41008100,0,
+            0x41000000, 4,
+            0x41000100, 4,
+            0x41444100,0x0,
+            0x41444000,0x0,
+            0x5FC00000, 0x3F,
+            0x43C10000, 2048
+            "/>
+
+         <!-- camera UHD 30FPS RECORDING tunings-->
+         <!-- MPCTLV3_LLCC_DDR_BW_SAMPLE_MS                     (0x43034000),0x21 -->
+         <!-- MPCTLV3_LLCC_DDR_BW_IO_PERCENT                    (0x43020000),0x64 -->
+         <!--Sched downmigrate/group_downmigrate 10, Upmigrate/group_upmigrate 50 -->
+         <!-- MPCTLV3_CORE_CTL_ENABLE_BIG                       (0x41008000),0    -->
+         <!-- MPCTLV3_CORE_CTL_ENABLE_LITTLE                    (0x41008100),0    -->
+         <!-- MPCTLV3_MIN_ONLINE_CPU_CLUSTER_BIG                (0x41000000),4 -->
+         <!-- MPCTLV3_MIN_ONLINE_CPU_CLUSTER_LITTLE             (0x41000100),4 -->
+         <!-- MPCTLV3_SCHEDUTIL_PREDICTIVE_LOAD_CLUSTER_LITTLE  (0x41444100),0  -->
+         <!-- MPCTLV3_SCHEDUTIL_PREDICTIVE_LOAD_CLUSTER_BIG     (0x41444000),0  -->
+         <!--MPCTLV3_XIAOMI_KSWAPD_AFFINITY, 0x3F -->
+         <!-- MPCTLV3_CPUCTL_CAMERA_CPUSHARE,          2048 -->
+         <Config
+            Id="0x00001349" Type="0" Enable="true" Timeout="0" Target="parrot"
+             Resources="
+            0x43034000,0x21,
+            0x43020000,0x64,
+            0x40CE0000, 0x0032000A,
+            0x40CF4000, 0x0032000A,
+            0x41008000,0,
+            0x41008100,0,
+            0x41000000, 4,
+            0x41000100, 4,
+            0x41444100,0x0,
+            0x41444000,0x0,
+            0x5FC00000, 0x3F,
+            0x43C10000, 2048
+            "/>
+
+         <!-- camera 8kUHD 30FPS RECORDING tunings-->
+         <!-- MPCTLV3_MIN_FREQ_CLUSTER_BIG_CORE_0               (0x40800000),1651 -->
+         <!-- MPCTLV3_LLCC_DDR_BW_SAMPLE_MS                     (0x43034000),0x21 -->
+         <!-- MPCTLV3_LLCC_DDR_BW_IO_PERCENT                    (0x43020000),0x64 -->
+         <!--Sched downmigrate/group_downmigrate 10, Upmigrate/group_upmigrate 20 -->
+         <!-- MPCTLV3_CORE_CTL_ENABLE_BIG                       (0x41008000),0    -->
+         <!-- MPCTLV3_CORE_CTL_ENABLE_LITTLE                    (0x41008100),0    -->
+         <!-- MPCTLV3_MIN_ONLINE_CPU_CLUSTER_BIG                (0x41000000),4 -->
+         <!-- MPCTLV3_MIN_ONLINE_CPU_CLUSTER_LITTLE             (0x41000100),4 -->
+         <!-- MPCTLV3_SCHEDUTIL_PREDICTIVE_LOAD_CLUSTER_LITTLE  (0x41444100),0  -->
+         <!-- MPCTLV3_SCHEDUTIL_PREDICTIVE_LOAD_CLUSTER_BIG     (0x41444000),0  -->
+         <Config
+            Id="0x00001350" Type="0" Enable="true" Timeout="0" Target="parrot"
+             Resources="
+            0x40800000,1651,
+            0x43034000,0x21,
+            0x43020000,0x64,
+            0x40CE0000, 0x0014000A,
+            0x40CF4000, 0x0014000A,
+            0x41008000,0,
+            0x41008100,0,
+            0x41000000, 4,
+            0x41000100, 4,
+            0x41444100,0x0,
+            0x41444000,0x0
+            "/>
+
+         <!-- camera START PREVIEW FRONT  tunings-->
+         <!-- MPCTLV3_LLCC_DDR_BW_SAMPLE_MS                     (0x43034000),0x21 -->
+         <!-- MPCTLV3_LLCC_DDR_BW_IO_PERCENT                    (0x43020000),0x64 -->
+         <!--Sched downmigrate/group_downmigrate 10, Upmigrate/group_upmigrate 20 -->
+         <!-- MPCTLV3_CORE_CTL_ENABLE_BIG                       (0x41008000),0    -->
+         <!-- MPCTLV3_CORE_CTL_ENABLE_LITTLE                    (0x41008100),0    -->
+         <!-- MPCTLV3_MIN_ONLINE_CPU_CLUSTER_BIG                (0x41000000),4 -->
+         <!-- MPCTLV3_MIN_ONLINE_CPU_CLUSTER_LITTLE             (0x41000100),4 -->
+         <!-- MPCTLV3_SCHEDUTIL_PREDICTIVE_LOAD_CLUSTER_LITTLE  (0x41444100),0  -->
+         <!-- MPCTLV3_SCHEDUTIL_PREDICTIVE_LOAD_CLUSTER_BIG     (0x41444000),0  -->
+         <!--MPCTLV3_XIAOMI_KSWAPD_AFFINITY, 0x3F -->
+         <!-- MPCTLV3_CPUCTL_CAMERA_CPUSHARE,          2048 -->
+         <Config
+            Id="0x00001351" Type="0" Enable="true" Timeout="0" Target="parrot"
+             Resources="
+            0x43034000,0x21,
+            0x43020000,0x64,
+            0x40CE0000, 0x0014000A,
+            0x40CF4000, 0x0014000A,
+            0x41008000,0,
+            0x41008100,0,
+            0x41000000, 4,
+            0x41000100, 4,
+            0x41444100,0x0,
+            0x41444000,0x0,
+            0x5FC00000, 0x3F,
+            0x43C10000, 2048
+            "/>
+
+         <!-- camera START PREVIEW TP FRONT  tunings-->
+         <!-- MPCTLV3_LLCC_DDR_BW_SAMPLE_MS                     (0x43034000),0x21 -->
+         <!-- MPCTLV3_LLCC_DDR_BW_IO_PERCENT                    (0x43020000),0x64 -->
+         <!--Sched downmigrate/group_downmigrate 10, Upmigrate/group_upmigrate 20 -->
+         <!-- MPCTLV3_CORE_CTL_ENABLE_BIG                       (0x41008000),0    -->
+         <!-- MPCTLV3_CORE_CTL_ENABLE_LITTLE                    (0x41008100),0    -->
+         <!-- MPCTLV3_MIN_ONLINE_CPU_CLUSTER_BIG                (0x41000000),4 -->
+         <!-- MPCTLV3_MIN_ONLINE_CPU_CLUSTER_LITTLE             (0x41000100),4 -->
+         <!-- MPCTLV3_SCHEDUTIL_PREDICTIVE_LOAD_CLUSTER_LITTLE  (0x41444100),0  -->
+         <!-- MPCTLV3_SCHEDUTIL_PREDICTIVE_LOAD_CLUSTER_BIG     (0x41444000),0  -->
+         <!-- MPCTLV3_CPUCTL_CAMERA_CPUSHARE,          2048 -->
+         <Config
+            Id="0x00001352" Type="0" Enable="true" Timeout="0" Target="parrot"
+             Resources="
+            0x43034000,0x21,
+            0x43020000,0x64,
+            0x40CE0000, 0x0014000A,
+            0x40CF4000, 0x0014000A,
+            0x41008000,0,
+            0x41008100,0,
+            0x41000000, 4,
+            0x41000100, 4,
+            0x41444100,0x0,
+            0x41444000,0x0,
+            0x43C10000, 2048
+            "/>
+
+         <!-- camera FRONT FHD 30FPS RECORDING tunings-->
+         <!-- MPCTLV3_LLCC_DDR_BW_SAMPLE_MS                     (0x43034000),0x21 -->
+         <!-- MPCTLV3_LLCC_DDR_BW_IO_PERCENT                    (0x43020000),0x64 -->
+         <!--Sched downmigrate/group_downmigrate 10, Upmigrate/group_upmigrate 20 -->
+         <!-- MPCTLV3_CORE_CTL_ENABLE_BIG                       (0x41008000),0    -->
+         <!-- MPCTLV3_CORE_CTL_ENABLE_LITTLE                    (0x41008100),0    -->
+         <!-- MPCTLV3_MIN_ONLINE_CPU_CLUSTER_BIG                (0x41000000),4 -->
+         <!-- MPCTLV3_MIN_ONLINE_CPU_CLUSTER_LITTLE             (0x41000100),4 -->
+         <!-- MPCTLV3_SCHEDUTIL_PREDICTIVE_LOAD_CLUSTER_LITTLE  (0x41444100),0  -->
+         <!-- MPCTLV3_SCHEDUTIL_PREDICTIVE_LOAD_CLUSTER_BIG     (0x41444000),0  -->
+         <Config
+            Id="0x00001353" Type="0" Enable="true" Timeout="0" Target="parrot"
+             Resources="
+            0x43034000,0x21,
+            0x43020000,0x64,
+            0x40CE0000, 0x0014000A,
+            0x40CF4000, 0x0014000A,
+            0x41008000,0,
+            0x41008100,0,
+            0x41000000, 4,
+            0x41000100, 4,
+            0x41444100,0x0,
+            0x41444000,0x0
+            "/>
+
+         <!-- camera SUPEREIS FHD 30FPS RECORDING tunings-->
+         <!-- MPCTLV3_LLCC_DDR_BW_SAMPLE_MS                     (0x43034000),0x21 -->
+         <!-- MPCTLV3_LLCC_DDR_BW_IO_PERCENT                    (0x43020000),0x64 -->
+         <!--Sched downmigrate/group_downmigrate 10, Upmigrate/group_upmigrate 20 -->
+         <!-- MPCTLV3_CORE_CTL_ENABLE_BIG                       (0x41008000),0    -->
+         <!-- MPCTLV3_CORE_CTL_ENABLE_LITTLE                    (0x41008100),0    -->
+         <!-- MPCTLV3_MIN_ONLINE_CPU_CLUSTER_BIG                (0x41000000),4 -->
+         <!-- MPCTLV3_MIN_ONLINE_CPU_CLUSTER_LITTLE             (0x41000100),4 -->
+         <!-- MPCTLV3_SCHEDUTIL_PREDICTIVE_LOAD_CLUSTER_LITTLE  (0x41444100),0  -->
+         <!-- MPCTLV3_SCHEDUTIL_PREDICTIVE_LOAD_CLUSTER_BIG     (0x41444000),0  -->
+         <Config
+            Id="0x00001354" Type="0" Enable="true" Timeout="0" Target="parrot"
+             Resources="
+            0x43034000,0x21,
+            0x43020000,0x64,
+            0x40CE0000, 0x0014000A,
+            0x40CF4000, 0x0014000A,
+            0x41008000,0,
+            0x41008100,0,
+            0x41000000, 4,
+            0x41000100, 4,
+            0x41444100,0x0,
+            0x41444000,0x0
+            "/>
+
+         <!-- camera FHD 60FPS RECORDING  tunings-->
+         <!-- MPCTLV3_LLCC_DDR_BW_HIST_MEMORY	                (0x43050000),0   -->
+         <!-- MPCTLV3_LLCC_DDR_BW_HYST_LENGTH  	                (0x43054000),0   -->
+         <!-- MPCTLV3_LLCC_DDR_BW_SAMPLE_MS                     (0x43034000),0x21 -->
+         <!--Sched downmigrate/group_downmigrate 10, Upmigrate/group_upmigrate 20 -->
+         <!-- MPCTLV3_CORE_CTL_ENABLE_BIG                       (0x41008000),0    -->
+         <!-- MPCTLV3_CORE_CTL_ENABLE_LITTLE                    (0x41008100),0    -->
+         <!-- MPCTLV3_MIN_ONLINE_CPU_CLUSTER_BIG                (0x41000000),4 -->
+         <!-- MPCTLV3_MIN_ONLINE_CPU_CLUSTER_LITTLE             (0x41000100),4 -->
+         <!-- MPCTLV3_SCHEDUTIL_PREDICTIVE_LOAD_CLUSTER_LITTLE  (0x41444100),0  -->
+         <!-- MPCTLV3_SCHEDUTIL_PREDICTIVE_LOAD_CLUSTER_BIG     (0x41444000),0  -->
+         <!-- MPCTLV3_LLCC_DDR_BW_IO_PERCENT                    (0x43020000),100 -->
+         <!--MPCTLV3_XIAOMI_KSWAPD_AFFINITY, 0x3F -->
+         <!-- MPCTLV3_CPUCTL_CAMERA_CPUSHARE,          2048 -->
+         <Config
+            Id="0x00001355" Type="0" Enable="true" Timeout="0" Target="parrot"
+             Resources="
+            0x43050000,0,
+            0x43054000,0,
+            0x43034000,0x21,
+            0x40CE0000, 0x0014000A,
+            0x40CF4000, 0x0014000A,
+            0x41008000,0,
+            0x41008100,0,
+            0x41000000, 4,
+            0x41000100, 4,
+            0x41444100,0x0,
+            0x41444000,0x0,
+            0x43020000, 100,
+            0x5FC00000, 0x3F,
+            0x43C10000, 2048
+            "/>
+
+         <!-- camera UHD 60FPS RECORDING tunings-->
+         <!-- MPCTLV3_LLCC_DDR_BW_HIST_MEMORY_8450              (0x43050000),0x00 -->
+         <!-- MPCTLV3_LLCC_DDR_BW_HYST_LENGTH_8450              (0x43054000),0x00 -->
+         <!-- MPCTLV3_LLCC_DDR_BW_SAMPLE_MS                     (0x43034000),0x10 -->
+         <!-- MPCTLV3_LLCC_DDR_BW_IO_PERCENT                    (0x43020000),0x64 -->
+         <!--Sched downmigrate/group_downmigrate 10, Upmigrate/group_upmigrate 50 -->
+         <!-- MPCTLV3_CORE_CTL_ENABLE_BIG                       (0x41008000),0    -->
+         <!-- MPCTLV3_CORE_CTL_ENABLE_LITTLE                    (0x41008100),0    -->
+         <!-- MPCTLV3_MIN_ONLINE_CPU_CLUSTER_BIG                (0x41000000),4 -->
+         <!-- MPCTLV3_MIN_ONLINE_CPU_CLUSTER_LITTLE             (0x41000100),4 -->
+         <!-- MPCTLV3_SCHEDUTIL_PREDICTIVE_LOAD_CLUSTER_LITTLE  (0x41444100),0    -->
+         <!-- MPCTLV3_SCHEDUTIL_PREDICTIVE_LOAD_CLUSTER_BIG     (0x41444000),0    -->
+          <Config
+            Id="0x00001356" Type="0" Enable="true" Timeout="0" Target="parrot"
+             Resources="
+            0x43050000,0,
+            0x43054000,0,
+            0x43034000,0x10,
+            0x43020000,0x64,
+            0x40CE0000, 0x0032000A,
+            0x40CF4000, 0x0032000A,
+            0x41008000,0x0,
+            0x41008100,0x0,
+            0x41000000, 4,
+            0x41000100, 4,
+            0x41444100,0x0,
+            0x41444000,0x0
+            "/>
+
+         <!-- camera FRONT FHD 60FPS RECORDING tunings-->
+         <!-- MPCTLV3_LLCC_DDR_BW_SAMPLE_MS                     (0x43034000),0x10 -->
+         <!-- MPCTLV3_LLCC_DDR_BW_IO_PERCENT                    (0x43020000),0x64 -->
+         <!--Sched downmigrate/group_downmigrate 10, Upmigrate/group_upmigrate 20 -->
+         <!-- MPCTLV3_CORE_CTL_ENABLE_BIG                       (0x41008000),0    -->
+         <!-- MPCTLV3_CORE_CTL_ENABLE_LITTLE                    (0x41008100),0    -->
+         <!-- MPCTLV3_MIN_ONLINE_CPU_CLUSTER_BIG                (0x41000000),4 -->
+         <!-- MPCTLV3_MIN_ONLINE_CPU_CLUSTER_LITTLE             (0x41000100),4 -->
+         <!-- MPCTLV3_SCHEDUTIL_PREDICTIVE_LOAD_CLUSTER_LITTLE  (0x41444100),0  -->
+         <!-- MPCTLV3_SCHEDUTIL_PREDICTIVE_LOAD_CLUSTER_BIG     (0x41444000),0  -->
+         <Config
+            Id="0x00001357" Type="0" Enable="true" Timeout="0" Target="parrot"
+             Resources="
+            0x43034000,0x10,
+            0x43020000,0x64,
+            0x40CE0000, 0x0014000A,
+            0x40CF4000, 0x0014000A,
+            0x41008000,0,
+            0x41008100,0,
+            0x41000000, 4,
+            0x41000100, 4,
+            0x41444100,0x0,
+            0x41444000,0x0
+            "/>
+
+         <!-- camera HD 30FPS BEAUTY EIS RECORDING  tunings-->
+         <!-- MPCTLV3_LLCC_DDR_BW_SAMPLE_MS                     (0x43034000),0x21 -->
+         <!-- MPCTLV3_LLCC_DDR_BW_IO_PERCENT                    (0x43020000),0x64 -->
+         <!--Sched downmigrate/group_downmigrate 10, Upmigrate/group_upmigrate 20 -->
+         <!-- MPCTLV3_CORE_CTL_ENABLE_BIG                       (0x41008000),0    -->
+         <!-- MPCTLV3_CORE_CTL_ENABLE_LITTLE                    (0x41008100),0    -->
+         <!-- MPCTLV3_MIN_ONLINE_CPU_CLUSTER_BIG                (0x41000000),4 -->
+         <!-- MPCTLV3_MIN_ONLINE_CPU_CLUSTER_LITTLE             (0x41000100),4 -->
+         <!-- MPCTLV3_SCHEDUTIL_PREDICTIVE_LOAD_CLUSTER_LITTLE  (0x41444100),0  -->
+         <!-- MPCTLV3_SCHEDUTIL_PREDICTIVE_LOAD_CLUSTER_BIG     (0x41444000),0  -->
+         <Config
+            Id="0x00001358" Type="0" Enable="true" Timeout="0" Target="parrot"
+             Resources="
+            0x43034000,0x21,
+            0x43020000,0x64,
+            0x40CE0000, 0x0014000A,
+            0x40CF4000, 0x0014000A,
+            0x41008000,0,
+            0x41008100,0,
+            0x41000000, 4,
+            0x41000100, 4,
+            0x41444100,0x0,
+            0x41444000,0x0
+            "/>
+
+         <!-- camera THIRD PART REAR tunings-->
+         <!-- MPCTLV3_LLCC_DDR_BW_SAMPLE_MS                     (0x43034000),0x21 -->
+         <!-- MPCTLV3_LLCC_DDR_BW_IO_PERCENT                    (0x43020000),0x64 -->
+         <!--Sched downmigrate/group_downmigrate 10, Upmigrate/group_upmigrate 50 -->
+         <!-- MPCTLV3_CORE_CTL_ENABLE_BIG                       (0x41008000),0    -->
+         <!-- MPCTLV3_CORE_CTL_ENABLE_LITTLE                    (0x41008100),0    -->
+         <!-- MPCTLV3_MIN_ONLINE_CPU_CLUSTER_BIG                (0x41000000),4 -->
+         <!-- MPCTLV3_MIN_ONLINE_CPU_CLUSTER_LITTLE             (0x41000100),4 -->
+         <!-- MPCTLV3_SCHEDUTIL_PREDICTIVE_LOAD_CLUSTER_LITTLE  (0x41444100),0  -->
+         <!-- MPCTLV3_SCHEDUTIL_PREDICTIVE_LOAD_CLUSTER_BIG     (0x41444000),0  -->
+         <Config
+            Id="0x00001359" Type="0" Enable="true" Timeout="0" Target="parrot"
+             Resources="
+            0x43034000,0x21,
+            0x43020000,0x64,
+            0x40CE0000, 0x0032000A,
+            0x40CF4000, 0x0032000A,
+            0x41008000,0,
+            0x41008100,0,
+            0x41000000, 4,
+            0x41000100, 4,
+            0x41444100,0x0,
+            0x41444000,0x0
+            "/>
+
+         <!-- decode open camera kswapd tunings-->
+         <!-- MPCTLV3_MAX_FREQ_CLUSTER_LITTLE_CORE_0  (0x40804100),0xFFF -->
+         <!-- MPCTLV3_MIN_FREQ_CLUSTER_LITTLE_CORE_0  (0x40800100),0xFFF -->
+         <!-- MPCTLV3_XIAOMI_KSWAPD_AFFINITY          (0x5FC00000),0x3F  -->
+         <Config
+            Id="0x00001361" Type="0" Enable="true" Timeout="0" Target="parrot"
+            Resources="0x40804100, 0XFFF, 0x40800100, 0XFFF, 0x5FC00000, 0x3F"/>
+
+         <!-- camera NIGHT_VIDEO_REAR tunings-->
+         <!-- MPCTLV3_LLCC_DDR_BW_POLLING_INTERVAL              (0x43030000),0x32 -->
+         <!-- MPCTLV3_LLCC_DDR_BW_IO_PERCENT                    (0x43020000),0x64 -->
+         <!--Sched downmigrate/group_downmigrate 10, Upmigrate/group_upmigrate 20 -->
+         <!-- MPCTLV3_CORE_CTL_ENABLE_BIG                       (0x41008000),0    -->
+         <!-- MPCTLV3_CORE_CTL_ENABLE_LITTLE                    (0x41008100),0    -->
+         <!-- MPCTLV3_MIN_ONLINE_CPU_CLUSTER_BIG                (0x41000000),4 -->
+         <!-- MPCTLV3_MIN_ONLINE_CPU_CLUSTER_LITTLE             (0x41000100),4 -->
+         <!-- MPCTLV3_SCHEDUTIL_PREDICTIVE_LOAD_CLUSTER_LITTLE  (0x41444100),0  -->
+         <!-- MPCTLV3_SCHEDUTIL_PREDICTIVE_LOAD_CLUSTER_BIG     (0x41444000),0  -->
+         <Config
+            Id="0x00001362" Type="0" Enable="true" Timeout="0" Target="parrot"
+             Resources="
+            0x43030000,0x32,
+            0x43020000,0x64,
+            0x40CE0000, 0x0014000A,
+            0x40CF4000, 0x0014000A,
+            0x41008000,0,
+            0x41008100,0,
+            0x41000000, 4,
+            0x41000100, 4,
+            0x41444100,0x0,
+            0x41444000,0x0
+            "/>
+
+         <!-- camera SNAPSHOT THERMAL tunings-->
+         <!-- MPCTLV3_ALL_CPUS_PWR_CLPS_DIS + 1       (0x40400000 + 1),0x1-->
+         <!-- MPCTLV3_SCHED_BOOST                     (0x40C00000),0x1    -->
+         <!-- MPCTLV3_MAX_FREQ_CLUSTER_BIG_CORE_0     (0x40804000),1651   -->
+         <!-- MPCTLV3_MIN_FREQ_CLUSTER_BIG_CORE_0     (0x40800000),1344   -->
+         <!-- MPCTLV3_MAX_FREQ_CLUSTER_LITTLE_CORE_0  (0x40804100),1651   -->
+         <!-- MPCTLV3_MIN_FREQ_CLUSTER_LITTLE_CORE_0  (0x40800100),1113   -->
+          <Config
+            Id="0x00001363" Type="0" Enable="true" Timeout="0" Target="parrot"
+             Resources="
+             0x40400001,0x1,
+             0x40C00000,0x1,
+             0x40804000,1651,
+             0x40800000,1344,
+             0x40804100,1651,
+             0x40800100,1113
+             "/>
+
+         <!-- camera GSI FHD 30FPS RECORDING tunings-->
+         <!-- MPCTLV3_MIN_FREQ_CLUSTER_BIG_CORE_0               (0x40800000),1651 -->
+         <!-- MPCTLV3_LLCC_DDR_BW_SAMPLE_MS                     (0x43034000),0x21 -->
+         <!-- MPCTLV3_LLCC_DDR_BW_IO_PERCENT                    (0x43020000),0x64 -->
+         <!--Sched downmigrate/group_downmigrate 10, Upmigrate/group_upmigrate 20 -->
+         <!-- MPCTLV3_CORE_CTL_ENABLE_BIG                       (0x41008000),0    -->
+         <!-- MPCTLV3_CORE_CTL_ENABLE_LITTLE                    (0x41008100),0    -->
+         <!-- MPCTLV3_MIN_ONLINE_CPU_CLUSTER_BIG                (0x41000000),4 -->
+         <!-- MPCTLV3_MIN_ONLINE_CPU_CLUSTER_LITTLE             (0x41000100),4 -->
+         <!-- MPCTLV3_SCHEDUTIL_PREDICTIVE_LOAD_CLUSTER_LITTLE  (0x41444100),0  -->
+         <!-- MPCTLV3_SCHEDUTIL_PREDICTIVE_LOAD_CLUSTER_BIG     (0x41444000),0  -->
+         <Config
+            Id="0x00001365" Type="0" Enable="true" Timeout="0" Target="parrot"
+             Resources="
+            0x40800000,1651,
+            0x43034000,0x21,
+            0x43020000,0x64,
+            0x40CE0000, 0x0014000A,
+            0x40CF4000, 0x0014000A,
+            0x41008000,0,
+            0x41008100,0,
+            0x41000000, 4,
+            0x41000100, 4,
+            0x41444100,0x0,
+            0x41444000,0x0
+            "/>
+
+        <!-- camera CONFIGURESTREAM BOOST tunings -->
+        <!-- MPCTLV3_ALL_CPUS_PWR_CLPS_DIS, 0x1 -->
+        <!-- MPCTLV3_SCHED_BOOST, 0x1 -->
+        <!-- MPCTLV3_MAX_FREQ_CLUSTER_BIG_CORE_0, 0xFFF -->
+        <!-- MPCTLV3_MIN_FREQ_CLUSTER_BIG_CORE_0, 0xFFF -->
+        <!-- MPCTLV3_MAX_FREQ_CLUSTER_LITTLE_CORE_0, 0xFFF -->
+        <!-- MPCTLV3_MIN_FREQ_CLUSTER_LITTLE_CORE_0, 0xFFF -->
+        <!-- MPCTLV3_CORE_CTL_ENABLE_BIG                       (0x41008000),0    -->
+        <!-- MPCTLV3_CORE_CTL_ENABLE_LITTLE                    (0x41008100),0    -->
+        <!-- MPCTLV3_MIN_ONLINE_CPU_CLUSTER_BIG                (0x41000000),4 -->
+        <!-- MPCTLV3_MIN_ONLINE_CPU_CLUSTER_LITTLE             (0x41000100),4 -->
+        <!-- MPCTLV3_BUS_DCVS_LLCC_DDR_LAT_MINFREQ_SILVER,(0x43460000),1017000 -->
+        <!-- MPCTLV3_BUS_DCVS_DDR_LAT_MINFREQ_GOLD,       (0x43488000),2092000-->
+        <!-- MPCTLV3_BUS_DCVS_L3_MEMLAT_MIN_FREQ_GOLD,    (0x43480000),1440000 -->
+        <!-- MPCTLV3_LLCC_DDR_BW_MIN_FREQ_V2,             (0x4303C000),2092000 -->
+        <!-- MPCTLV3_SCHED_CPUSET_SYSTEM_BACKGROUND, 0x7 -->
+        <!-- MPCTLV3_SCHED_CPUSET_TOP_APP, 0xF8 -->
+        <!-- MPCTLV3_SCHED_CPUSET_CAMERA_BACKGROUND,  0x6 -->
+        <!-- MPCTLV3_CPUCTL_TOPAPP_CPUSHARE, 4096 -->
+        <!-- MPCTLV3_CPUCTL_CAMERA_CPUSHARE, 4096 -->
+        <!-- MPCTLV3_CPUCTL_BACKGROUND_CPUSHARE, 512 -->
+        <!-- MPCTLV3_MEMCG_SWAPPINESS_CAMERA_PROVIDER, 60 -->
+        <Config
+            Id="0x00001366" Type="0" Enable="true" Timeout="0" Target="parrot"
+            Resources="
+            0x40400000, 0x1,
+            0x40C00000, 0x1,
+            0x40804000, 0xFFF,
+            0x40800000, 0xFFF,
+            0x40804100, 0xFFF,
+            0x40800100, 0xFFF,
+            0x41008000,0,
+            0x41008100,0,
+            0x41000000, 4,
+            0x41000100, 4,
+            0x43460000, 1017000,
+            0x43488000,	2092000,
+            0x43480000,	1440000,
+            0x4303C000,	2092000,
+            0x40C44000, 0x7,
+            0x40C3C000, 0xF8,
+            0x43C08000, 0x6,
+            0x43C20000, 4096,
+            0x43C10000, 4096,
+            0x43C0C000, 512,
+            0x5FC8C000, 60,
+            "/>
+
+        <!-- camera open thermal tunings -->
+        <!-- MPCTLV3_ALL_CPUS_PWR_CLPS_DIS, 0x1 -->
+        <!-- MPCTLV3_MIN_FREQ_CLUSTER_LITTLE_CORE_0(0x40800100), 0x52C -->
+        <!-- MPCTLV3_MIN_FREQ_CLUSTER_BIG_CORE_0(0x40800000), 0x673 -->
+        <!-- UPMIGRATE - 50 85 -->
+        <!-- DOWNMIGRATE - 10 85 -->
+        <!-- MPCTLV3_SCHED_CPUSET_SYSTEM_BACKGROUND, 0x7 -->
+        <!-- MPCTLV3_SCHED_CPUSET_TOP_APP, 0xF8 -->
+        <!-- MPCTLV3_SCHED_CPUSET_CAMERA_BACKGROUND, 0x6 -->
+        <!-- MPCTLV3_CPUCTL_CAMERA_CPUSHARE, 4096 -->
+        <!-- MPCTLV3_CPUCTL_BACKGROUND_CPUSHARE, 512 -->
+        <!-- MPCTLV3_MEMCG_SWAPPINESS_CAMERA_PROVIDER, 60 -->
+        <Config
+            Id="0x00001367" Type="0" Enable="true" Timeout="0" Target="parrot"
+            Resources="
+            0x40400001, 0x1,
+            0x40800100, 0x52C,
+            0x40800000, 0x673,
+            0x40CE0000, 0x0032000A,
+            0x40CF4000, 0x0032000A,
+            0x40C44000, 0x7,
+            0x40C3C000, 0xF8,
+            0x43C08000, 0x6,
+            0x43C10000, 4096,
+            0x43C0C000, 512,
+            0x5FC8C000, 60,
+            "/>
+
+         <!-- camera close thermal tunings-->
+         <!-- MPCTLV3_ALL_CPUS_PWR_CLPS_DIS+1, (0x40400000+1),0x1 -->
+         <!-- MPCTLV3_MIN_FREQ_CLUSTER_LITTLE_CORE_0(0x40800100), 0x52C -->
+         <!-- MPCTLV3_MIN_FREQ_CLUSTER_BIG_CORE_0(0x40800000), 0x673 -->
+         <!-- MPCTLV3_SCHED_CPUSET_SYSTEM_BACKGROUND, 0x7 -->
+         <!-- MPCTLV3_SCHED_CPUSET_TOP_APP,           0xF8 -->
+         <!-- MPCTLV3_CPUCTL_TOPAPP_CPUSHARE,          4096 -->
+         <!-- MPCTLV3_CPUCTL_CAMERA_CPUSHARE,          4096 -->
+         <!-- MPCTLV3_CPUCTL_BACKGROUND_CPUSHARE,      512 -->
+         <!-- MPCTLV3_MEMCG_SWAPPINESS_CAMERA_PROVIDER, 60 -->
+         <Config
+            Id="0x00001368" Type="0" Enable="true" Timeout="0" Target="parrot"
+             Resources="
+             0x40400001, 0x1,
+             0x40800100, 0x52C,
+             0x40800000, 0x673,
+             0x40C44000, 0x7,
+             0x40C3C000, 0xF8,
+             0x43C20000, 4096,
+             0x43C10000, 4096,
+             0x43C0C000, 512,
+             0x5FC8C000, 60,
+             "/>
+
+        <!-- camera snapshot thermal tunings -->
+        <!-- MPCTLV3_ALL_CPUS_PWR_CLPS_DIS, 0x1 -->
+        <!-- MPCTLV3_MIN_FREQ_CLUSTER_LITTLE_CORE_0(0x40800100), 0x52C -->
+        <!-- MPCTLV3_MIN_FREQ_CLUSTER_BIG_CORE_0(0x40800000), 0x673 -->
+        <!-- MPCTLV3_CPUCTL_TOPAPP_CPUSHARE, 4096 -->
+        <!-- MPCTLV3_CPUCTL_CAMERA_CPUSHARE, 4096 -->
+        <!-- MPCTLV3_CPUCTL_BACKGROUND_CPUSHARE, 512 -->
+        <!-- MPCTLV3_XIAOMI_KSWAPD_AFFINITY(0x5FC00000), 0x3F -->
+        <!-- MPCTLV3_XIAOMI_KCOMPACTD_AFFINITY(0x5FCF0000), 0x7F -->
+        <Config
+            Id="0x00001369" Type="0" Enable="true" Timeout="0" Target="parrot"
+            Resources="
+            0x40400000, 0x1,
+            0x40800100, 0x52C,
+            0x40800000, 0x673,
+            0x40C44000, 0x7,
+            0x40C3C000, 0xF8,
+            0x43C08000, 0x6,
+            0x43C2C000, 4096,
+            0x43C10000, 4096,
+            0x43C0C000, 512,
+            0x5FC00000, 0x3F,
+            0x5FCF0000, 0x7F
+            "/>
+
+        <!-- camera CONFIGURESTREAM BOOST thermal tunings -->
+        <!-- MPCTLV3_ALL_CPUS_PWR_CLPS_DIS, 0x1 -->
+        <!-- MPCTLV3_MIN_FREQ_CLUSTER_LITTLE_CORE_0(0x40800100), 0x52C -->
+        <!-- MPCTLV3_MIN_FREQ_CLUSTER_BIG_CORE_0(0x40800000), 0x673 -->
+        <!-- MPCTLV3_SCHED_CPUSET_SYSTEM_BACKGROUND, 0x7 -->
+        <!-- MPCTLV3_SCHED_CPUSET_TOP_APP, 0xF8 -->
+        <!-- MPCTLV3_SCHED_CPUSET_CAMERA_BACKGROUND,  0x6 -->
+        <!-- MPCTLV3_CPUCTL_TOPAPP_CPUSHARE, 4096 -->
+        <!-- MPCTLV3_CPUCTL_CAMERA_CPUSHARE, 4096 -->
+        <!-- MPCTLV3_CPUCTL_BACKGROUND_CPUSHARE, 512 -->
+        <!-- MPCTLV3_MEMCG_SWAPPINESS_CAMERA_PROVIDER, 60 -->
+        <Config
+            Id="0x0000136A" Type="0" Enable="true" Timeout="0" Target="parrot"
+            Resources="
+            0x40400000, 0x1,
+            0x40800100, 0x52C,
+            0x40800000, 0x673,
+            0x40C44000, 0x7,
+            0x40C3C000, 0xF8,
+            0x43C08000, 0x6,
+            0x43C2C000, 4096,
+            0x43C10000, 4096,
+            0x43C0C000, 512,
+            0x5FC8C000, 60
+            "/>
+
+        <!-- camera Video record close tunning -->
+        <!-- GPU - min pwrlevel 0 (freq 940 Mhz) -->
+        <!-- GPU - max pwrlevel 0 (freq 940 Mhz) -->
+        <!-- MPCTLV3_LLCC_DDR_BW_IO_PERCENT                    (0x43020000),0x64 -->
+        <!--Sched downmigrate/group_downmigrate 10, Upmigrate/group_upmigrate 20 -->
+        <!-- MPCTLV3_CORE_CTL_ENABLE_BIG                       (0x41008000),0    -->
+        <!-- MPCTLV3_CORE_CTL_ENABLE_LITTLE                    (0x41008100),0    -->
+        <!-- MPCTLV3_MIN_ONLINE_CPU_CLUSTER_BIG                (0x41000000),4 -->
+        <!-- MPCTLV3_MIN_ONLINE_CPU_CLUSTER_LITTLE             (0x41000100),4 -->
+        <!-- MPCTLV3_SCHEDUTIL_PREDICTIVE_LOAD_CLUSTER_LITTLE  (0x41444100),0  -->
+        <!-- MPCTLV3_SCHEDUTIL_PREDICTIVE_LOAD_CLUSTER_BIG     (0x41444000),0  -->
+        <Config
+            Id="0x00001370" Type="0" Enable="true" Timeout="0" Target="parrot"
+            Resources="
+            0x42804000,0x0,
+            0x42808000,0x0,
+            0x43020000,0x64,
+            0x40CE0000,0x0014000A,
+            0x40CF4000,0x0014000A,
+            0x41008000,0,
+            0x41008100,0,
+            0x41000000, 4,
+            0x41000100, 4,
+            0x41444100,0x0,
+            0x41444000,0x0
+            "/>
+
+        <!-- camera Third part APP UHD 30FPS RECORDING tunings -->
+        <!-- MPCTLV3_MIN_FREQ_CLUSTER_BIG_CORE_0               (0x40800000),1900 -->
+        <!-- MPCTLV3_LLCC_DDR_BW_SAMPLE_MS                     (0x43034000),0x21 -->
+        <!-- MPCTLV3_LLCC_DDR_BW_IO_PERCENT                    (0x43020000),0x64 -->
+        <!--Sched downmigrate/group_downmigrate 10, Upmigrate/group_upmigrate 20 -->
+        <!-- MPCTLV3_CORE_CTL_ENABLE_BIG                       (0x41008000),0    -->
+        <!-- MPCTLV3_CORE_CTL_ENABLE_LITTLE                    (0x41008100),0    -->
+        <!-- MPCTLV3_MIN_ONLINE_CPU_CLUSTER_BIG                (0x41000000),4 -->
+        <!-- MPCTLV3_MIN_ONLINE_CPU_CLUSTER_LITTLE             (0x41000100),4 -->
+        <!-- MPCTLV3_SCHEDUTIL_PREDICTIVE_LOAD_CLUSTER_LITTLE  (0x41444100),0  -->
+        <!-- MPCTLV3_SCHEDUTIL_PREDICTIVE_LOAD_CLUSTER_BIG     (0x41444000),0  -->
+        <!--MPCTLV3_XIAOMI_KSWAPD_AFFINITY, 0x3F -->
+        <!-- MPCTLV3_CPUCTL_CAMERA_CPUSHARE,          2048 -->
+        <Config
+            Id="0x00001371" Type="0" Enable="true" Timeout="0" Target="parrot"
+            Resources="
+            0x40800000,1900,
+            0x43034000,0x21,
+            0x43020000,0x64,
+            0x40CE0000, 0x0014000A,
+            0x40CF4000, 0x0014000A,
+            0x41008000,0,
+            0x41008100,0,
+            0x41000000, 4,
+            0x41000100, 4,
+            0x41444100,0x0,
+            0x41444000,0x0,
+            0x5FC00000, 0x3F,
+            0x43C10000, 2048
+            "/>
+    </Powerhint>
+</HintConfigs>

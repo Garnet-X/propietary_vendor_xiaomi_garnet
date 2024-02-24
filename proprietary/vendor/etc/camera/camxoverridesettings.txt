@@ -1,0 +1,200 @@
+#N16 setting file
+multiCameraLogicalXMLFile=garnet.xml
+
+# close camera hal log
+logInfoMask=0
+logWarningMask=0
+logConfigMask=0
+logVerboseMask=0
+logCoreCfgMask=0
+overrideLogLevels=0x1
+logRequestMapping=FALSE
+systemLogEnable=TRUE
+enableAsciiLogging=0
+enableTxtLogging=0
+offlineLogNumber=14
+raiserecoverysigabrt=FALSE
+offlineLoggerEnableBackupLog=FALSE
+enableCameraCoreDumpBinary=FALSE
+enableCameraCoreDumpText=FALSE
+numConsecutiveRecovery=10
+
+#CAMX and CHI trace
+traceGroupsEnable=0
+enableChiTrace=FALSE
+
+#Quick Preview Control
+QuickPreviewMask=0x400
+
+# PDAF Settings
+pdafHWEnable=FALSE
+disablePDAF=FALSE
+disableFocusIndication=TRUE
+
+disableOIS=FALSE
+dynamicPropertiesEnabled=FALSE
+
+# Bit Mask for HighQualityQuickShot Configure
+# Bit[0]     - Support MFNR/LLS in SAT Mode
+# Bit[1]     - Support HDR in SAT Mode
+# Bit[2]     - Support SR in SAT Mode
+# Bit[3]     - Support SuperNightSE in SAT Mode
+# Bit[4]     - Support HDRSR in SAT Mode
+# Bit[5~7]   - reserve
+# Bit[8]     - Support Bokeh MFNR in Back Camera
+# Bit[9]     - Support Bokeh HDR in Back Camera
+# Bit[10]    - Support MFNR in Front Camera
+# Bit[11]    - Support HDR in Front Camera
+# Bit[12]    - Support Bokeh in Front Camera
+# Bit[13]    - Support Macro Mode
+# Bit[14]    - Support Professional Mode
+# Bit[15]    - reserve
+# Bit[16~19] - HighQualityQuickShot Queue Length(max number of HighQualityQuickShot)
+# Bit[20]    - Support Reuse RDI Buffer
+# Bit[21]    - Support Limit MFNR Input Frames
+# Bit[22]    - Support Quickshot and HightQualityQuickShot Mixed Used
+# Bit[23]    - reserve
+# Bit[24]    - Mixed Quickshot Support SAT MFNR
+# Bit[25]    - Mixed Quickshot Support Front MFNR
+# Bit[26]    - Mixed Quickshot Support Macro Mode
+# Bit[27]    - Mixed Quickshot Support Front Portrait
+# Bit[28]    - Mixed Quickshot Support Back Portrait
+# Bit[29]    - Mixed Quickshot Support Pixel Mode
+# Bit[30~31] - reserve
+HighQualityQuickShotSupportMask=0x7437D07
+
+# Bit Mask for HighQualityQuickShotDelayTime Configure
+# Bit[0 ~ 3]   - DelayTime XX * 100 ms of Bokeh MFNR in Back Camera
+# Bit[4 ~ 7]   - DelayTime XX * 100 ms of Bokeh MFNR in Front Camera
+# Bit[8 ~ 11]  - DelayTime XX * 100 ms of Back Normal Capture
+# Bit[12 ~ 15] - DelayTime XX * 100 ms of HDR in Front Camera
+# Bit[16 ~ 19] - DelayTime XX * 100 ms of HDR in Back Camera
+# Bit[20 ~ 23] - DelayTime XX * 100 ms of SuperNightSE in Back Camera
+# Bit[24 ~ 27] - DelayTime XX * 100 ms of SR in Back Camera
+# Bit[28 ~ 31] - DelayTime XX * 100 ms of Front Normal Capture
+# Bit[32 ~ 35] - DelayTime XX * 100 ms of Macro Mode in Back Camera
+# Bit[36 ~ 39] - DelayTime XX * 100 ms of Bokeh HDR in Back Camera
+# Bit[40 ~ 43] - DelayTime XX * 100 ms of Face Beauty in Back Camera
+# Bit[44 ~ 47] - DelayTime XX * 100 ms of Ultra Wide
+# Bit[48 ~ 51] - DelayTime XX * 100 ms of Wide
+# Bit[52 ~ 55] - DelayTime XX * 100 ms of Professional Mode in Back Camera
+# Bit[56 ~ 63] - reserve
+QuickShotDelayTimeMask=0x00024022222003
+
+# override Flash Current
+overrideFlashTorchCurrent=70
+overrideFlashVideoLightCurrent=70
+overrideFlashSnapshotLightCurrent=200
+overrideFlashPreviewLightCurrent=70
+FlashTorchCurrentSwitch=TRUE
+FlashTorchTemperatureLevels=1@40|2@60
+
+#eeprom strict checkSum
+enableStrictChecksum=FALSE
+
+#enable sensor probe optimization
+sensorModuleNumber=4
+
+# Arcsoft skinbeautifier
+isBeautyVersion=3
+enableEGLCache=TRUE
+isBeautyMakeupSupported=TRUE
+isBeautyOptionConfigSupported=0
+
+#Enable AlgoUp HDR
+SupportedAlgoEngineHdr=1
+
+# Bokeh
+isPhyicalMultiCameraSupported=TRUE
+multiCameraEnable=TRUE
+bokehVendorID=1
+bokehRelightVerion=2
+supportedBokehRoleMask=0x1
+ismfnrbokehsupported=TRUE
+BokehSlaveMfnrEnable=FALSE
+isFrontBokehHDRsupported=1
+SDK_LOG_LEVEL=4
+
+#InSensorZoom
+enableInSensorZoom=TRUE
+
+# Enable YuvUp SN/SE
+# https://xiaomi.f.mioffice.cn/sheets/shtk4rNloLn27Kka49Pv4kfbadu?sheet=cqr5DF
+MIVISuperNightSupportMask=0x80
+
+# Video EIS
+enableICAInGrid=1
+enableNCSService=1
+#Res1@FPS1|Res2@FPS2 ...,5--720P,6--1080P,8--4K,3001--8K
+vsquality=5@30|6@30|6@60
+iseispreviewSupported=TRUE
+isNCSFlushFenceJobEnabled=TRUE
+
+# Video skinbeautifie/Filter/Mimovie
+isVideoBeautifierSupported=TRUE
+isVideoFilterSupported=TRUE
+superVideoFilterVersion=1
+isVideoMimovieSupported=TRUE
+isVideoBeautyEISSupported=TRUE
+isVideoBeautyScreenshotSupported=TRUE
+
+# Video Low Light Auto Fps
+is30fpsDynamicSupported=TRUE
+is60fpsDynamicSupported=TRUE
+dynamicFpsSupported=0@30|1@30|2@30|3@30|0@60
+
+# AEC Sync Ratioc
+AESyncRatiosVersion1=2700@0.69594,1|5000@0.6182,1|6500@0.578596,1
+#Second Supply
+AESyncRatiosVersion2=2700@0.69594,1|5000@0.6182,1|6500@0.578596,1
+
+# AEC DebugData space
+debugDataSizeAEC=800000
+
+# Disable Video Hdr
+isVideoHdrSupported=0
+
+# Enable quickcamera
+QuickCameraSupported=TRUE
+
+# Enable SW2DLUT
+enableSW2DLUT=TRUE
+
+# Quickview
+enableCHIPartialData=1
+quickviewsupport=TRUE
+quickviewmask=0x2F07
+addScanIn3ALockStatus=1
+
+#flush time
+nodeResponseTime=200
+sessionResponseTimePadding=250
+sessionMaxFlushWaitTime=1000
+
+# Preview Priority
+previewPriority=110
+
+#enable IPA dump file
+enableIPADump=TRUE
+
+#enableHighTemperatureTrace
+enableHighTemperatureTrace=FALSE
+
+#thermalcontroller
+boardTemperatureNode=0
+ReleasePerfFrameNum=60
+enableBLMClient=0
+
+#Enable earlyPCR
+numPCRsBeforeStreamOn=1
+
+#enable camera pre init
+isEarlysettingsEnable=0x1
+isActuatorEarlyInitEnable=TRUE
+enableOISOptimization=TRUE
+
+# For CTS Reprocess Size
+minReprocessInputWidth=0x1FFF
+minReprocessInputHeight=0x1FFF
+
+logDumpMask = false

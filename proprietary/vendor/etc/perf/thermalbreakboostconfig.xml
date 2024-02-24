@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    an element represents an element in hashmap ,the key include Scence
+    and temperature struct, the key is cpu freq
+    1. Cluster: "cpu0,cpu4,cpu7" in sm7475 platform; "cpu0,cpu3,cpu7"  in sm8550 platform
+    2. default scence: scence = 0
+    3. ex: < 39: return 35, < 39: return 37, < 41: return 39, < 43: return 41, < 45: return 43, abnormal_temp: return_45
+    4. target0 represents performance mode，target1 represents balanced mode，target2 represents power mode
+-->
+<BoostConfigs>
+    <ScrollBoost>
+        <!--default -->
+        <Config Scence="0">
+                <Child Trig="35000"
+                Target0="boost:1 cpu0:1958400 cpu4:2400000"
+                Target1="boost:1 cpu0:1958400 cpu4:2400000"
+                Target2="boost:1 cpu0:1958400 cpu4:2400000"/>
+                <Child Trig="38000"
+                Target0="boost:1 cpu0:1958400 cpu4:2208000"
+                Target1="boost:1 cpu0:1958400 cpu4:2208000"
+                Target2="boost:1 cpu0:1958400 cpu4:2208000"/>
+                <Child Trig="41000"
+                Target0="boost:1 cpu0:1958400 cpu4:1651200"
+                Target1="boost:1 cpu0:1958400 cpu4:1651200"
+                Target2="boost:1 cpu0:1958400 cpu4:1651200"/>
+                <Child Trig="45000"
+                Target0="boost:1 cpu0:1497600 cpu4:960000"
+                Target1="boost:1 cpu0:1497600 cpu4:960000"
+                Target2="boost:1 cpu0:1497600 cpu4:960000"/>
+        </Config>
+            <!--customized scenarios, more radical-->
+        <Config Scence="0">
+                <Child Trig="35000"
+                Target0="boost:1 cpu0:1958400 cpu4:2400000"
+                Target1="boost:1 cpu0:1958400 cpu4:2400000"
+                Target2="boost:1 cpu0:1958400 cpu4:2400000"/>
+                <Child Trig="38000"
+                Target0="boost:1 cpu0:1958400 cpu4:2304000"
+                Target1="boost:1 cpu0:1958400 cpu4:2304000"
+                Target2="boost:1 cpu0:1958400 cpu4:2304000"/>
+                <Child Trig="41000"
+                Target0="boost:1 cpu0:1958400 cpu4:1900800"
+                Target1="boost:1 cpu0:1958400 cpu4:1900800"
+                Target2="boost:1 cpu0:1958400 cpu4:1900800"/>
+                <Child Trig="45000"
+                Target0="boost:1 cpu0:1497600 cpu4:960000"
+                Target1="boost:1 cpu0:1497600 cpu4:960000"
+                Target2="boost:1 cpu0:1497600 cpu4:960000"/>
+        </Config>
+    </ScrollBoost>
+</BoostConfigs>
