@@ -332,6 +332,13 @@ dex_import {
 }
 
 dex_import {
+	name: "vendor.qti.ims.connectionaidlservice-V1-java",
+	owner: "xiaomi",
+	jars: ["proprietary/system_ext/framework/vendor.qti.ims.connectionaidlservice-V1-java.jar"],
+	system_ext_specific: true,
+}
+
+dex_import {
 	name: "vendor.qti.ims.factory-V2.0-java",
 	owner: "xiaomi",
 	jars: ["proprietary/system_ext/framework/vendor.qti.ims.factory-V2.0-java.jar"],
@@ -349,6 +356,13 @@ dex_import {
 	name: "vendor.qti.ims.factory-V2.2-java",
 	owner: "xiaomi",
 	jars: ["proprietary/system_ext/framework/vendor.qti.ims.factory-V2.2-java.jar"],
+	system_ext_specific: true,
+}
+
+dex_import {
+	name: "vendor.qti.ims.factoryaidlservice-V1-java",
+	owner: "xiaomi",
+	jars: ["proprietary/system_ext/framework/vendor.qti.ims.factoryaidlservice-V1-java.jar"],
 	system_ext_specific: true,
 }
 
@@ -374,6 +388,13 @@ dex_import {
 }
 
 dex_import {
+	name: "vendor.qti.ims.rcssipaidlservice-V1-java",
+	owner: "xiaomi",
+	jars: ["proprietary/system_ext/framework/vendor.qti.ims.rcssipaidlservice-V1-java.jar"],
+	system_ext_specific: true,
+}
+
+dex_import {
 	name: "vendor.qti.ims.rcsuce-V1.0-java",
 	owner: "xiaomi",
 	jars: ["proprietary/system_ext/framework/vendor.qti.ims.rcsuce-V1.0-java.jar"],
@@ -391,6 +412,13 @@ dex_import {
 	name: "vendor.qti.ims.rcsuce-V1.2-java",
 	owner: "xiaomi",
 	jars: ["proprietary/system_ext/framework/vendor.qti.ims.rcsuce-V1.2-java.jar"],
+	system_ext_specific: true,
+}
+
+dex_import {
+	name: "vendor.qti.ims.rcsuceaidlservice-V1-java",
+	owner: "xiaomi",
+	jars: ["proprietary/system_ext/framework/vendor.qti.ims.rcsuceaidlservice-V1-java.jar"],
 	system_ext_specific: true,
 }
 

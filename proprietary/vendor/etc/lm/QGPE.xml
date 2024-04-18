@@ -252,11 +252,6 @@
            <AsyncId>VENDOR_HINT_PICARD_LOAD_CHANGED</AsyncId>
            <AsyncType>1</AsyncType>
         </Trigger>
-        <Trigger>
-           <Primary>true</Primary>
-           <AsyncId>VENDOR_HINT_GAME_ACTION_DISABLE</AsyncId>
-           <AsyncType>1</AsyncType>
-        </Trigger>
     </Triggers>
     <IgnoredApps>
         <App>com.google.android.gms</App>

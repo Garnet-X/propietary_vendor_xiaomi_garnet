@@ -36,6 +36,11 @@ on property:vendor.qti.qcc.oper.mode=4
     chown system misc /data/misc/qcc/conf/qcc.conf
     chmod 0660 /data/misc/qcc/conf/qcc.conf
 
+on property:vendor.qti.qcc.oper.mode=6
+    write /data/misc/qcc/conf/qcc.conf "OperationMode:6"
+    chown system misc /data/misc/qcc/conf/qcc.conf
+    chmod 0660 /data/misc/qcc/conf/qcc.conf
+
 service qccsyshal@1.2-service /system/system_ext/bin/qccsyshal@1.2-service
     class hal
     user system

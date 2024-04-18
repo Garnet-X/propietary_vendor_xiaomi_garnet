@@ -105,6 +105,7 @@ function configure_read_ahead_kb_values() {
 }
 
 function configure_memory_parameters() {
+	ProductName=`getprop ro.product.name`
 	configure_zram_parameters
 	configure_read_ahead_kb_values
 
@@ -130,7 +131,12 @@ function configure_memory_parameters() {
 	fi
 	# Disable wsf for all targets beacause we are using efk.
 	# wsf Range : 1..1000 So set to bare minimum value 1.
-	echo 1 > /proc/sys/vm/watermark_scale_factor
+	if [ "$ProductName" == "garnet" ] ; then
+		echo 10 > /proc/sys/vm/watermark_scale_factor
+	else
+		echo 1 > /proc/sys/vm/watermark_scale_factor
+	fi
+	# echo 1 > /proc/sys/vm/watermark_scale_factor
 
 	#Set per-app max kgsl reclaim limit and per shrinker call limit
 	if [ -f /sys/class/kgsl/kgsl/page_reclaim_per_call ]; then

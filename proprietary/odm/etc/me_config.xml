@@ -23,9 +23,9 @@
         <feature feature_id="4" hw_support="1"  sw_enable="1" sw_mp_enable="1"/>
         <feature feature_id="5" hw_support="0"  sw_enable="0" sw_mp_enable="0"/>
         <feature feature_id="6" hw_support="0"  sw_enable="0" sw_mp_enable="0"/>
-        <feature feature_id="7" hw_support="1"  sw_enable="1" sw_mp_enable="1"/>
-        <feature feature_id="8" hw_support="1"  sw_enable="1" sw_mp_enable="1"/>
-        <feature feature_id="9" hw_support="1"  sw_enable="1" sw_mp_enable="1"/>
+        <feature feature_id="7" hw_support="1"  sw_enable="0" sw_mp_enable="0"/>
+        <feature feature_id="8" hw_support="1"  sw_enable="0" sw_mp_enable="0"/>
+        <feature feature_id="9" hw_support="1"  sw_enable="0" sw_mp_enable="0"/>
         <feature feature_id="10" hw_support="1"  sw_enable="1" sw_mp_enable="1"/>
         <feature feature_id="11" hw_support="0"  sw_enable="0" sw_mp_enable="0"/>
         <feature feature_id="12" hw_support="0"  sw_enable="0" sw_mp_enable="0"/>

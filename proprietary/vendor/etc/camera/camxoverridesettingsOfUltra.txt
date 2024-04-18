@@ -193,4 +193,4 @@ minReprocessInputWidth=0x1FFF
 minReprocessInputHeight=0x1FFF
 
 halBufferCacheMax=8
-logDumpMask = false
+

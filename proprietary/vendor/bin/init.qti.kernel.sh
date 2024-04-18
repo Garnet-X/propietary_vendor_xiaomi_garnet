@@ -35,6 +35,8 @@ verify_pasr_support()
 {
 	ddr_type=`od -An -tx /proc/device-tree/memory/ddr_device_type`
 	ddr_type5="08"
+       # MIUI ADD:
+       devicename=`getprop ro.product.device`
 
          if [ -d /sys/kernel/mem-offline ]; then
 		#only LPDDR5 supports PAAR
@@ -44,6 +46,14 @@ verify_pasr_support()
 
                 setprop vendor.pasr.enabled false
          fi
+
+       # MIUI ADD:
+       if [ "$devicename" == "liuqin" ]; then
+              echo 3 > /proc/sys/vm/page-cluster
+        else
+              echo 0 > /proc/sys/vm/page-cluster
+       fi
+
 }
 
 start_msm_irqbalance()

@@ -101,6 +101,9 @@ function set_density_by_fb() {
             "yudi")
             setprop vendor.display.lcd_density 360
             ;;
+            "liuqin")
+            setprop vendor.display.lcd_density 400
+            ;;
             *)
             setprop vendor.display.lcd_density 480
             ;;
@@ -149,6 +152,9 @@ function set_density_by_fb() {
             ;;
             "yudi")
             setprop vendor.display.lcd_density 360
+            ;;
+            "liuqin")
+            setprop vendor.display.lcd_density 400
             ;;
         esac
     fi
@@ -484,7 +490,7 @@ set_density_by_fb
 
 
 # set Lilliput LCD density for ADP
-product=`getprop ro.board.platform`
+product=`getprop ro.product.vendor_dlkm.name`
 
 case "$product" in
         "msmnile_au")
@@ -519,6 +525,22 @@ case "$product" in
         *)
         ;;
 esac
+
+case "$product" in
+        "yudi")
+         setprop vendor.display.lcd_density 360
+         ;;
+        *)
+        ;;
+esac
+case "$product" in
+        "liuqin")
+         setprop vendor.display.lcd_density 400
+         ;;
+        *)
+        ;;
+esac
+
 # Setup display nodes & permissions
 # HDMI can be fb1 or fb2
 # Loop through the sysfs nodes and determine

@@ -197,4 +197,3 @@ enableOISOptimization=TRUE
 minReprocessInputWidth=0x1FFF
 minReprocessInputHeight=0x1FFF
 
-logDumpMask = false

@@ -40,7 +40,7 @@ elif [ "$soc_id" -eq 591 ]; then
 elif [ "$soc_id" -eq 530 ] || [ "$soc_id" -eq 531 ] || [ "$soc_id" -eq 540 ]; then
     setprop ro.vendor.qti.soc_name cape
     setprop ro.vendor.qti.soc_model SM8475
-if ! getprop ro.vendor.audio.video.pc.disable >/dev/null 2>&1; then
+if [ -z "$(getprop ro.vendor.audio.video.pc.disable)"]; then
     setprop ro.vendor.media_performance_class 31
 fi
 elif [ "$soc_id" -eq 415 ] || [ "$soc_id" -eq 439 ] || [ "$soc_id" -eq 456 ] ||

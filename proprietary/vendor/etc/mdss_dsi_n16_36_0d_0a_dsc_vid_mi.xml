@@ -224,17 +224,19 @@
             <!--  1 : open flatmode in douyin  -->
             <AppFlatModeEnable>1</AppFlatModeEnable>
         </flatmode>
-        <NitMapBlv>
-            <NitMapBlvParamName>RemapEnable minNit ManualmaxNit Remapminbl Remapmanualmaxbl RemapPointNum TargetNit PanelBrCl Tolerance</NitMapBlvParamName>
+       <NitMapBlv>
+            <NitMapBlvParamName>RemapEnable minNitvalue minBLvalue RemapThreshold RemapThresholdNum RemapThresholdZone0 RemapPointNum TargetNit PanelBrCl Tolerance Tolerancefac</NitMapBlvParamName>
             <RemapEnable>1</RemapEnable>
-            <minNit>2.0</minNit>
-            <ManualmaxNit>500.0</ManualmaxNit>
-            <Remapminbl>15</Remapminbl>
-            <Remapmanualmaxbl>8191</Remapmanualmaxbl>
+            <minNitvalue>2.0</minNitvalue>
+            <minBLvalue>15</minBLvalue>
+            <RemapThreshold>8191</RemapThreshold>
+            <RemapThresholdNum>1</RemapThresholdNum>
+            <RemapThresholdZone0>2.0 500.0 15 8191</RemapThresholdZone0>
             <RemapPointNum>24</RemapPointNum>
             <TargetNit>2 3.5 4.3 5 8 11 17 24 34 46 59 81 90 109 137 157 180 205 226 280 330 369 433 500</TargetNit>
             <PanelBrCl>15 31 39 45 71 93 249 396 577 777 992 1380 1580 1970 2452 2760 3070 3476 3921 4981 5845 6470 7408 8191</PanelBrCl>
             <Tolerance>-0.01 0.05</Tolerance>
+            <Tolerancefac>1 1</Tolerancefac>
        </NitMapBlv>
        <dither>
             <ditherParamName>DitherStrength HistControl Hist0Thresh</ditherParamName>

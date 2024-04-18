@@ -6,6 +6,5 @@ libfastcvopt.so
 libOpenCL.so
 libSNPE.so
 libmialgo_ai_vision.so
-libomp.so
 libmialgo_utils.so
 libxmi_slow_motion_mein.so
