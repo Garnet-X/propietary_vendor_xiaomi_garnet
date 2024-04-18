@@ -540,15 +540,6 @@ prebuilt_etc_xml {
 }
 
 prebuilt_etc_xml {
-	name: "memtrack_qti",
-	owner: "xiaomi",
-	src: "proprietary/vendor/etc/vintf/manifest/memtrack_qti.xml",
-	filename_from_src: true,
-	sub_dir: "vintf/manifest",
-	soc_specific: true,
-}
-
-prebuilt_etc_xml {
 	name: "qtiradio-saidl",
 	owner: "xiaomi",
 	src: "proprietary/vendor/etc/vintf/manifest/qtiradio-saidl.xml",
