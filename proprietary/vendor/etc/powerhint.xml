@@ -871,7 +871,7 @@
          <!-- camera FHD 60FPS RECORDING  tunings-->
          <!-- MPCTLV3_LLCC_DDR_BW_HIST_MEMORY	                (0x43050000),0   -->
          <!-- MPCTLV3_LLCC_DDR_BW_HYST_LENGTH  	                (0x43054000),0   -->
-         <!-- MPCTLV3_LLCC_DDR_BW_SAMPLE_MS                     (0x43034000),0x21 -->
+         <!-- MPCTLV3_LLCC_DDR_BW_SAMPLE_MS                     (0x43034000),0x10 -->
          <!--Sched downmigrate/group_downmigrate 10, Upmigrate/group_upmigrate 20 -->
          <!-- MPCTLV3_CORE_CTL_ENABLE_BIG                       (0x41008000),0    -->
          <!-- MPCTLV3_CORE_CTL_ENABLE_LITTLE                    (0x41008100),0    -->
@@ -880,14 +880,12 @@
          <!-- MPCTLV3_SCHEDUTIL_PREDICTIVE_LOAD_CLUSTER_LITTLE  (0x41444100),0  -->
          <!-- MPCTLV3_SCHEDUTIL_PREDICTIVE_LOAD_CLUSTER_BIG     (0x41444000),0  -->
          <!-- MPCTLV3_LLCC_DDR_BW_IO_PERCENT                    (0x43020000),100 -->
-         <!--MPCTLV3_XIAOMI_KSWAPD_AFFINITY, 0x3F -->
-         <!-- MPCTLV3_CPUCTL_CAMERA_CPUSHARE,          2048 -->
          <Config
             Id="0x00001355" Type="0" Enable="true" Timeout="0" Target="parrot"
              Resources="
             0x43050000,0,
             0x43054000,0,
-            0x43034000,0x21,
+            0x43034000,0x10,
             0x40CE0000, 0x0014000A,
             0x40CF4000, 0x0014000A,
             0x41008000,0,
@@ -896,9 +894,7 @@
             0x41000100, 4,
             0x41444100,0x0,
             0x41444000,0x0,
-            0x43020000, 100,
-            0x5FC00000, 0x3F,
-            0x43C10000, 2048
+            0x43020000, 100
             "/>
 
          <!-- camera UHD 60FPS RECORDING tunings-->
