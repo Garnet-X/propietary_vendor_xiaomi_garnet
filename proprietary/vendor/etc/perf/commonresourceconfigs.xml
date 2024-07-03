@@ -184,8 +184,6 @@ need to be added just before the end of it's major group. -->
         <Minor OpcodeValue="0x10" Node="/sys/class/devfreq/soc:qcom,cpu-cpu-llcc-bw/polling_interval" />
         <!--Here onwards are the path for new frequency opcodes for  CPU_LLCC_BW V2 nodes to support
              new values from kernel 5.10 onwards-->
-        <Minor OpcodeValue="0x11" Node="/sys/devices/system/cpu/bus_dcvs/LLCC/190b6400.qcom,bwmon-llcc/min_freq" />
-        <Minor OpcodeValue="0x12" Node="/sys/devices/system/cpu/bus_dcvs/LLCC/190b6400.qcom,bwmon-llcc/max_freq" />
         <Minor OpcodeValue="0x13" Node="/sys/devices/system/cpu/bus_dcvs/LLCC/190b6400.qcom,bwmon-llcc/hyst_trigger_count" />
         <Minor OpcodeValue="0x14" Node="/sys/devices/system/cpu/bus_dcvs/LLCC/soc:qcom,memlat:llcc:gold-compute/max_freq" />
         <Minor OpcodeValue="0x15" Node="/sys/devices/system/cpu/bus_dcvs/LLCC/190b6400.qcom,bwmon-llcc/hist_memory" />
