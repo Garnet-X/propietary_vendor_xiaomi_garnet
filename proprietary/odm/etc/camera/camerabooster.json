@@ -9,7 +9,6 @@
             "protect_locktask_num": 2,
             "kill_tag": 31,
             "3rd_kill_tag": 31,
-            "dynamic_interval": 3000,
             "update_state_delay_ms": 5000
         },
     "support": {
@@ -21,7 +20,7 @@
             "lmkd_perceptible_support": true,
             "dynamic_task_proctect_support": true,
             "thread_inhibit_support": true,
-            "inhibit_dynamic_enable": true,
+            "inhibit_dynamic_enable": false,
             "inhibit_tokill_cgroup_support": true,
             "inhibit_sysapp_cgroup_support": true,
             "hprof_dump_enable":false,
