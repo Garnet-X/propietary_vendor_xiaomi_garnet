@@ -1109,6 +1109,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/garnet/proprietary/vendor/firmware/evass.mdt:$(TARGET_COPY_OUT_VENDOR)/firmware/evass.mdt \
     vendor/xiaomi/garnet/proprietary/vendor/firmware/focaltech_ts_fw_GVO.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/focaltech_ts_fw_GVO.bin \
     vendor/xiaomi/garnet/proprietary/vendor/firmware/focaltech_ts_fw_TianMa.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/focaltech_ts_fw_TianMa.bin \
+    vendor/xiaomi/garnet/proprietary/vendor/firmware/fs19xx.fsm:$(TARGET_COPY_OUT_VENDOR)/firmware/fs19xx.fsm \
     vendor/xiaomi/garnet/proprietary/vendor/firmware/gmu_gen70000.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/gmu_gen70000.bin \
     vendor/xiaomi/garnet/proprietary/vendor/firmware/goodix_cfg_group_CSOT.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/goodix_cfg_group_CSOT.bin \
     vendor/xiaomi/garnet/proprietary/vendor/firmware/goodix_firmware_CSOT.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/goodix_firmware_CSOT.bin \
