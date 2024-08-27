@@ -302,7 +302,6 @@ need to be added just before the end of it's major group. -->
         <Minor OpcodeValue="0x13" Node="/sys/class/devfreq/soc:qcom,cpu0-cpu-ddr-latfloor/max_freq" />
         <Minor OpcodeValue="0x14" Node="/sys/class/devfreq/soc:qcom,cpu0-cpu-llcc-lat/max_freq" />
         <Minor OpcodeValue="0x15" Node="/sys/class/devfreq/soc:qcom,cpu0-llcc-ddr-lat/max_freq" />
-        <Minor OpcodeValue="0x16" Node="/sys/devices/system/cpu/bus_dcvs/L3/soc:qcom,memlat:l3:prime/min_freq" />
         <Minor OpcodeValue="0x17" Node="/sys/devices/system/cpu/bus_dcvs/LLCC/soc:qcom,memlat:llcc:silver/min_freq" />
         <Minor OpcodeValue="0x18" Node="/sys/devices/system/cpu/bus_dcvs/DDR/soc:qcom,memlat:ddr:silver/min_freq" />
         <Minor OpcodeValue="0x19" Node="/sys/devices/system/cpu/bus_dcvs/DDR/soc:qcom,memlat:ddr:gold/freq_scale_pct" />
