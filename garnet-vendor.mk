@@ -838,10 +838,29 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/garnet/proprietary/vendor/etc/mdss_dsi_n16_36_0d_0a_dsc_vid_mi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mdss_dsi_n16_36_0d_0a_dsc_vid_mi.xml \
     vendor/xiaomi/garnet/proprietary/vendor/etc/mdss_dsi_n16_41_02_0c_dsc_vid_mi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mdss_dsi_n16_41_02_0c_dsc_vid_mi.xml \
     vendor/xiaomi/garnet/proprietary/vendor/etc/mdss_dsi_n16_42_02_0b_dsc_vid_mi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mdss_dsi_n16_42_02_0b_dsc_vid_mi.xml \
+    vendor/xiaomi/garnet/proprietary/vendor/etc/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
+    vendor/xiaomi/garnet/proprietary/vendor/etc/media_codecs_c2_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2_audio.xml \
+    vendor/xiaomi/garnet/proprietary/vendor/etc/media_codecs_cape_vendor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_cape_vendor.xml \
     vendor/xiaomi/garnet/proprietary/vendor/etc/media_codecs_parrot_v0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_parrot_v0.xml \
+    vendor/xiaomi/garnet/proprietary/vendor/etc/media_codecs_parrot_v1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_parrot_v1.xml \
+    vendor/xiaomi/garnet/proprietary/vendor/etc/media_codecs_parrot_v2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_parrot_v2.xml \
     vendor/xiaomi/garnet/proprietary/vendor/etc/media_codecs_performance_parrot_v0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_parrot_v0.xml \
+    vendor/xiaomi/garnet/proprietary/vendor/etc/media_codecs_performance_parrot_v1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_parrot_v1.xml \
+    vendor/xiaomi/garnet/proprietary/vendor/etc/media_codecs_performance_parrot_v2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_parrot_v2.xml \
+    vendor/xiaomi/garnet/proprietary/vendor/etc/media_codecs_performance_ravelin.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_ravelin.xml \
+    vendor/xiaomi/garnet/proprietary/vendor/etc/media_codecs_ravelin.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_ravelin.xml \
+    vendor/xiaomi/garnet/proprietary/vendor/etc/media_codecs_system_default.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_system_default.xml \
+    vendor/xiaomi/garnet/proprietary/vendor/etc/media_codecs_taro_vendor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_taro_vendor.xml \
+    vendor/xiaomi/garnet/proprietary/vendor/etc/media_codecs_with_dolby_taro.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_with_dolby_taro.xml \
     vendor/xiaomi/garnet/proprietary/vendor/etc/media_parrot_v0/video_system_specs.json:$(TARGET_COPY_OUT_VENDOR)/etc/media_parrot_v0/video_system_specs.json \
+    vendor/xiaomi/garnet/proprietary/vendor/etc/media_parrot_v1/video_system_specs.json:$(TARGET_COPY_OUT_VENDOR)/etc/media_parrot_v1/video_system_specs.json \
+    vendor/xiaomi/garnet/proprietary/vendor/etc/media_parrot_v2/video_system_specs.json:$(TARGET_COPY_OUT_VENDOR)/etc/media_parrot_v2/video_system_specs.json \
+    vendor/xiaomi/garnet/proprietary/vendor/etc/media_profiles.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles.xml \
     vendor/xiaomi/garnet/proprietary/vendor/etc/media_profiles_parrot_v0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_parrot_v0.xml \
+    vendor/xiaomi/garnet/proprietary/vendor/etc/media_profiles_parrot_v1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_parrot_v1.xml \
+    vendor/xiaomi/garnet/proprietary/vendor/etc/media_profiles_parrot_v2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_parrot_v2.xml \
+    vendor/xiaomi/garnet/proprietary/vendor/etc/media_profiles_ravelin.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_ravelin.xml \
+    vendor/xiaomi/garnet/proprietary/vendor/etc/media_ravelin/video_system_specs.json:$(TARGET_COPY_OUT_VENDOR)/etc/media_ravelin/video_system_specs.json \
     vendor/xiaomi/garnet/proprietary/vendor/etc/models/acd/event.eai:$(TARGET_COPY_OUT_VENDOR)/etc/models/acd/event.eai \
     vendor/xiaomi/garnet/proprietary/vendor/etc/models/acd/music.eai:$(TARGET_COPY_OUT_VENDOR)/etc/models/acd/music.eai \
     vendor/xiaomi/garnet/proprietary/vendor/etc/models/acd/speech.eai:$(TARGET_COPY_OUT_VENDOR)/etc/models/acd/speech.eai \
