@@ -157,6 +157,7 @@
         {
             "name": "inhibit_app_list",
             "config": [
+                "com.google.android.providers.media.module",
                 "com.sohu.inputmethod.sogou.xiaomi"
             ]
         },
@@ -230,6 +231,7 @@
         }
     ],
     "threshold_8Gmem": {
-            "recent_task_pss_threshold": 819200
+            "recent_task_pss_threshold": 819200,
+            "cam_boost_threshold": 2097152
     }
 }
